@@ -1,143 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BZD1381ZWW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BZD1381ZWW');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Luxanta</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="shortcut icon" href="favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;800&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0a0914;
-            --bg-midnight: #11101d;
-            --primary-purple: #8b5cf6;
-            --primary-pink: #ec4899;
-            --accent-cyan: #06b6d4;
-            --text-light: #EAEAEA;
-            --text-muted: #A0A0A0;
+            --brand-secondary: #FBBF24;
+            --brand-dark: #111827;
         }
-        body { background-color: var(--bg-dark); color: var(--text-light); font-family: 'Inter', sans-serif; }
-        .font-cursive { font-family: 'Great Vibes', cursive; }
-        .text-gradient-pink-purple {
-            background: linear-gradient(to right, var(--primary-pink), var(--primary-purple));
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-dark);
+            color: #EAEAEA;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--brand-secondary), #F59E0B);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .text-gradient-pink-cyan {
-            background: linear-gradient(to right, var(--primary-pink), var(--accent-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .contact-input {
+            background-color: #1f2937;
+            border: 1px solid #374151;
         }
-        .form-input {
-            background-color: var(--bg-midnight);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            transition: all 0.3s ease;
-        }
-        .form-input:focus {
+        .contact-input:focus {
+            border-color: var(--brand-secondary);
+            box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.4);
             outline: none;
-            border-color: var(--primary-pink);
-            box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
         }
         .cta-button {
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(236, 72, 153, 0.25);
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
         }
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.3);
+            box-shadow: 0 0 30px rgba(251, 191, 36, 0.6);
         }
     </style>
-
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '4177767735878464');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=4177767735878464&ev=PageView&noscript=1"
-    /></noscript>
-    </head>
+</head>
 <body class="antialiased">
-    <header class="sticky top-0 z-50 bg-dark/70 backdrop-blur-md border-b border-gray-800/50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-            <a href="index.html" class="text-4xl font-cursive text-gradient-pink-purple">Luxanta</a>
-            <a href="index.html" class="text-sm font-semibold text-gray-300 hover:text-white transition-colors">&larr; Back to Home</a>
-        </nav>
+    <header class="py-4 px-4 md:px-8 bg-gray-900/50 backdrop-blur-lg border-b border-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html">
+                <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#FBBF24;stop-opacity:1" /><stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" /></linearGradient>
+                    </defs>
+                    <text x="3" y="28" font-family="'Inter', sans-serif" font-size="28" font-weight="900" fill="#E5E7EB">Lu<tspan fill="url(#goldGradient)">x</tspan>anta</text>
+                    <path d="M78 22.5 a 4 4 0 1 1 0 5 a 4 4 0 0 1 0 -5" fill="#111827"/><path d="M78.5 24 l 3 1.5 l -3 1.5 z" fill="#E5E7EB"/><path d="M3 35 h 144" stroke="url(#goldGradient)" stroke-width="2.5" stroke-linecap="round"/><path d="M3 35 L 14 35 L 14 31" stroke="#E5E7EB" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M89 31 L 89 35 L 147 35" stroke="#E5E7EB" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
     </header>
-    <main class="min-h-[80vh] flex items-center justify-center p-4">
-        <div class="max-w-xl w-full text-center">
-            <div class="inline-flex items-center justify-center bg-purple-500/20 text-purple-300 font-bold rounded-full px-4 py-1.5 text-sm mb-6">
-                <svg class="h-5 w-5 text-purple-400 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
-                24/7 SUPPORT
+    <main class="py-16 md:py-24 px-4">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h1 class="text-4xl md:text-5xl font-black mb-4">Get In Touch</h1>
+            <p class="text-lg text-gray-400 mb-8">Have a question? We'd love to hear from you. Fill out the form below or email us directly.</p>
+            <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl text-left">
+                <form id="contact-form" action="https://formspree.io/f/mvgbnpjj" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300">Full Name</label>
+                        <input type="text" id="name" name="name" required class="contact-input mt-1 block w-full rounded-md p-3 text-white focus:ring-0">
+                    </div>
+                     <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300">Email Address</label>
+                        <input type="email" id="email" name="email" required class="contact-input mt-1 block w-full rounded-md p-3 text-white focus:ring-0">
+                    </div>
+                     <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="contact-input mt-1 block w-full rounded-md p-3 text-white focus:ring-0"></textarea>
+                    </div>
+                    <button type="submit" id="submit-button" class="w-full cta-button bg-gradient-to-r from-amber-400 to-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-full">Send Message</button>
+                </form>
+                <div id="form-status" class="mt-4 text-center"></div>
             </div>
-            <h1 class="text-4xl md:text-5xl font-extrabold font-poppins text-white">
-                We're Here to <span class="text-gradient-pink-cyan">Help You Succeed</span>
-            </h1>
-            <p class="mt-4 text-lg text-text-muted">
-                Have questions or need support? Fill out the form below and our expert team will get back to you ASAP.
-            </p>
-            
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="mt-10 space-y-6 text-left">
-                
-                <p class="hidden">
-                    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-                </p>
-
-                <div>
-                    <label for="name" class="text-sm font-medium text-gray-300">Full Name</label>
-                    <input type="text" id="name" name="name" class="form-input w-full mt-2 p-3 rounded-lg text-white" placeholder="Enter your name" required>
-                </div>
-                <div>
-                    <label for="email" class="text-sm font-medium text-gray-300">Email Address</label>
-                    <input type="email" id="email" name="email" class="form-input w-full mt-2 p-3 rounded-lg text-white" placeholder="you@example.com" required>
-                </div>
-                <div>
-                    <label for="message" class="text-sm font-medium text-gray-300">Message</label>
-                    <textarea id="message" name="message" rows="4" class="form-input w-full mt-2 p-3 rounded-lg text-white" placeholder="How can we help you build your empire?" required></textarea>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="cta-button w-full bg-gradient-pink-purple text-white font-bold text-lg rounded-lg py-3 px-10">
-                        Send Message
-                    </button>
-                </div>
-            </form>
-             <p class="mt-8 text-sm text-text-muted">You can also reach us directly at <a href="mailto:official.luxanta@gmail.com" class="font-semibold text-pink-400 hover:underline">official.luxanta@gmail.com</a></p>
+            <p class="mt-8 text-gray-400">You can also reach us at: <a href="mailto:official.luxanta@gmail.com" class="font-semibold gradient-text">official.luxanta@gmail.com</a></p>
         </div>
     </main>
-    <footer class="bg-midnight border-t border-gray-800/50">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-4xl font-cursive text-gradient-pink-purple">Luxanta</h3>
-            <p class="mt-2 text-base text-text-muted">Build Your Digital Empire.</p>
-            <div class="mt-6 flex justify-center space-x-6">
-                <a href="terms.html" class="text-sm text-text-muted hover:text-white">Terms of Service</a>
-                <a href="privacy.html" class="text-sm text-text-muted hover:text-white">Privacy Policy</a>
-                <a href="contact.html" class="text-sm text-text-muted hover:text-white">Contact Us</a>
-            </div>
-            <p class="mt-8 text-sm text-gray-500">&copy; 2025 Luxanta. All Rights Reserved.</p>
-        </div>
-    </footer>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+        const submitButton = document.getElementById('submit-button');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formStatus.innerHTML = '<p class="text-green-400">Thank you! Your message has been sent successfully.</p>';
+                    form.reset();
+                } else {
+                    formStatus.innerHTML = '<p class="text-red-400">Oops! There was a problem submitting your form. Please try again.</p>';
+                }
+            } catch (error) {
+                formStatus.innerHTML = '<p class="text-red-400">Oops! There was a problem submitting your form. Please try again.</p>';
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            }
+        });
+    </script>
 </body>
 </html>
 
