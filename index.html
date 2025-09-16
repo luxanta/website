@@ -274,7 +274,7 @@
         </div>
     </section>
     
-    <!-- Glimpse Inside Your Arsenal Section -->
+    <!-- **UPDATED** Glimpse Inside Your Arsenal Section -->
     <section id="arsenal" class="py-16 bg-gray-900 px-4">
         <div class="container mx-auto max-w-6xl text-center">
             <h2 class="text-4xl md:text-5xl font-black mb-4">A Glimpse Inside Your Arsenal</h2>
@@ -720,14 +720,33 @@
 
     <script>
         window.onload = () => {
-            lucide.createIcons();
+            // This ensures all scripts run only after the entire page is loaded.
+            
+            // Initialize Lucide Icons
+            try {
+                lucide.createIcons();
+            } catch (e) {
+                console.error("Lucide icons could not be initialized.", e);
+            }
 
+            // Countdown Timer
             function startTimer() {
-                const countDownDate = new Date();
-                countDownDate.setHours(countDownDate.getHours() + 24);
-
+                const countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
                 const timerElement = document.getElementById("timer");
-                if (!timerElement) return;
+                if (!timerElement) {
+                    console.error("Timer element not found");
+                    return;
+                }
+
+                const daysEl = document.getElementById("days");
+                const hoursEl = document.getElementById("hours");
+                const minutesEl = document.getElementById("minutes");
+                const secondsEl = document.getElementById("seconds");
+
+                if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
+                    console.error("One or more timer display elements are missing.");
+                    return;
+                }
 
                 const x = setInterval(function() {
                     const now = new Date().getTime();
@@ -738,12 +757,10 @@
                     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                    if (document.getElementById("days")) {
-                        document.getElementById("days").innerHTML = String(days).padStart(2, '0');
-                        document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
-                        document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
-                        document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
-                    }
+                    daysEl.textContent = String(days).padStart(2, '0');
+                    hoursEl.textContent = String(hours).padStart(2, '0');
+                    minutesEl.textContent = String(minutes).padStart(2, '0');
+                    secondsEl.textContent = String(seconds).padStart(2, '0');
                     
                     if (distance < 0) {
                         clearInterval(x);
@@ -753,11 +770,13 @@
             }
             startTimer();
             
+            // Auto-update copyright year
             const yearSpan = document.getElementById('copyright-year');
             if(yearSpan) {
                 yearSpan.textContent = new Date().getFullYear();
             }
 
+            // Earning Estimator
             const priceSlider = document.getElementById('price-slider');
             const salesSlider = document.getElementById('sales-slider');
             const priceOutput = document.getElementById('price-output');
@@ -768,10 +787,11 @@
 
             function updateEstimator() {
                 if (!priceSlider || !salesSlider || !priceOutput || !salesOutput || !dailyRevenue || !monthlyRevenue || !yearlyRevenue) {
+                     console.error("One or more estimator elements are missing.");
                     return;
                 }
-                const price = parseInt(priceSlider.value);
-                const sales = parseInt(salesSlider.value);
+                const price = parseInt(priceSlider.value) || 0;
+                const sales = parseInt(salesSlider.value) || 0;
                 const daily = price * sales;
                 const monthly = daily * 30;
                 const yearly = daily * 365;
@@ -786,7 +806,7 @@
             if (priceSlider && salesSlider) {
                 priceSlider.addEventListener('input', updateEstimator);
                 salesSlider.addEventListener('input', updateEstimator);
-                updateEstimator(); 
+                updateEstimator(); // Run once on load
             }
         };
     </script>
