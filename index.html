@@ -20,7 +20,7 @@
         .bg-accent-color {
             background-color: #80D9FF;
         }
-        .btn, .payhip-buy-button {
+        .btn, .payhip-buy-button, #generate-ideas-btn {
             display: inline-block;
             background: linear-gradient(180deg, #FFFFFF 0%, #AFAFAF 100%);
             color: #000000 !important;
@@ -33,8 +33,9 @@
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
             box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
         }
-        .btn:hover, .payhip-buy-button:hover {
+        .btn:hover, .payhip-buy-button:hover, #generate-ideas-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
         }
@@ -102,6 +103,18 @@
         .discover-icon {
             filter: drop-shadow(0 0 8px #80D9FF);
         }
+        .version-badge {
+            display: inline-block;
+            background-color: rgba(128, 217, 255, 0.1);
+            color: #80D9FF;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid rgba(128, 217, 255, 0.3);
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
 
         @keyframes pulse-glow {
             0%, 100% { box-shadow: 0 0 15px 0px rgba(128, 217, 255, 0.3); }
@@ -141,6 +154,18 @@
         }
         .is-visible {
             animation: fadeIn-up 0.8s ease-out forwards;
+        }
+        .loader {
+            border: 2px solid #1f2937;
+            border-top: 2px solid #80D9FF;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -198,7 +223,7 @@
             </div>
 
             <div class="animate-on-scroll" style="animation-delay: 0.5s;">
-                 <a href="https://payhip.com/b/RCiLW" class="payhip-buy-button btn" data-theme="blue" data-product="RCiLW">GET INSTANT ACCESS</a>
+                <a href="https://payhip.com/b/RCiLW" class="payhip-buy-button btn" data-theme="blue" data-product="RCiLW">GET INSTANT ACCESS</a>
                 <div class="flex justify-center items-center gap-2 mt-4">
                     <div class="flex -space-x-2">
                         <img class="inline-block h-6 w-6 rounded-full ring-2 ring-black" src="https://placehold.co/32x32/80D9FF/000000?text=A" alt="User avatar">
@@ -278,6 +303,30 @@
                     <h3 class="text-2xl font-bold accent-color">The Skill Seeker</h3>
                     <p class="mt-2 text-gray-300">You want to master the skills that actually make money online: copywriting, funnels, and paid ads.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gemini AI Idea Generator -->
+    <section class="section-padding bg-black">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold animate-on-scroll">
+                ✨ Experience The <span class="accent-color">AI Power</span> Inside
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 mt-4 mb-8 animate-on-scroll" style="animation-delay: 0.2s;">
+                Get a taste of the AI magic that powers the IG Profit Engine. Enter your niche below to generate your first viral reel idea instantly.
+            </p>
+            <div class="max-w-xl mx-auto animate-on-scroll" style="animation-delay: 0.3s;">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input type="text" id="niche-input" placeholder="e.g., Fitness Coach, Graphic Designer..." class="w-full bg-[#111] border border-[#333] rounded-full px-6 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent-color">
+                    <button id="generate-ideas-btn" class="shrink-0">Generate Ideas ✨</button>
+                </div>
+            </div>
+            <div id="loading-spinner" class="mt-8 hidden justify-center">
+                <div class="loader"></div>
+            </div>
+            <div id="ideas-output" class="mt-8 grid gap-4">
+                <!-- AI Generated ideas will be injected here -->
             </div>
         </div>
     </section>
@@ -451,23 +500,129 @@
             const showMoreBtn = document.getElementById('show-more-btn');
             const hiddenTestimonials = document.getElementById('hidden-testimonials');
 
-            showMoreBtn.addEventListener('click', () => {
-                hiddenTestimonials.classList.remove('hidden');
-                // Create a masonry effect for the newly added items
-                const testimonialGrid = document.getElementById('testimonial-grid');
-                testimonialGrid.classList.remove('columns-2', 'md:columns-3', 'lg:columns-4');
-                testimonialGrid.classList.add('columns-2', 'md:columns-3', 'lg:columns-4');
-                
-                // Animate the new items
-                const newItems = hiddenTestimonials.querySelectorAll('.break-inside-avoid');
-                 newItems.forEach((item, index) => {
-                    item.classList.add('animate-on-scroll');
-                    setTimeout(() => {
-                         observer.observe(item);
-                    }, index * 100);
-                });
+            if(showMoreBtn && hiddenTestimonials) {
+                showMoreBtn.addEventListener('click', () => {
+                    hiddenTestimonials.classList.remove('hidden');
+                    const newItems = hiddenTestimonials.querySelectorAll('.break-inside-avoid');
+                     newItems.forEach((item, index) => {
+                        item.classList.add('animate-on-scroll');
+                        setTimeout(() => {
+                             observer.observe(item);
+                        }, index * 100);
+                    });
 
-                showMoreBtn.style.display = 'none';
+                    showMoreBtn.style.display = 'none';
+                });
+            }
+
+             // Gemini API Logic
+            const generateBtn = document.getElementById('generate-ideas-btn');
+            const nicheInput = document.getElementById('niche-input');
+            const ideasOutput = document.getElementById('ideas-output');
+            const loadingSpinner = document.getElementById('loading-spinner');
+
+            generateBtn.addEventListener('click', async () => {
+                const niche = nicheInput.value.trim();
+                if (!niche) {
+                    ideasOutput.innerHTML = `<p class="text-red-400">Please enter your niche first.</p>`;
+                    return;
+                }
+
+                ideasOutput.innerHTML = '';
+                loadingSpinner.style.display = 'flex';
+                generateBtn.disabled = true;
+                generateBtn.textContent = 'Generating...';
+
+                const systemPrompt = "You are an expert Instagram marketing strategist specializing in creating viral short-form video content (Reels). Your goal is to provide creative, engaging, and trend-aware ideas.";
+                const userQuery = `Based on the niche '${niche}', generate 3 distinct and creative Instagram Reel ideas. For each idea, provide a compelling hook, a brief description of the content, and a call to action.`;
+                const apiKey = "";
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+                const payload = {
+                    contents: [{ parts: [{ text: userQuery }] }],
+                    systemInstruction: { parts: [{ text: systemPrompt }] },
+                    generationConfig: {
+                        responseMimeType: "application/json",
+                        responseSchema: {
+                            type: "ARRAY",
+                            items: {
+                                type: "OBJECT",
+                                properties: {
+                                    "hook": { "type": "STRING" },
+                                    "content": { "type": "STRING" },
+                                    "cta": { "type": "STRING" }
+                                }
+                            }
+                        }
+                    }
+                };
+                
+                let retries = 3;
+                let delay = 1000;
+
+                while(retries > 0) {
+                    try {
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+
+                        if (!response.ok) {
+                           if(response.status === 429) { // Rate limit
+                                await new Promise(resolve => setTimeout(resolve, delay));
+                                delay *= 2;
+                                retries--;
+                                if(retries === 0) throw new Error(`API error after retries: ${response.statusText}`);
+                                continue;
+                           }
+                           throw new Error(`API error: ${response.statusText}`);
+                        }
+
+                        const result = await response.json();
+                        
+                        loadingSpinner.style.display = 'none';
+                        generateBtn.disabled = false;
+                        generateBtn.innerHTML = 'Generate Ideas ✨';
+
+                        if (result.candidates && result.candidates.length > 0 && result.candidates[0].content?.parts?.[0]?.text) {
+                            const json = result.candidates[0].content.parts[0].text;
+                            const ideas = JSON.parse(json);
+                            
+                            ideas.forEach((idea, index) => {
+                                const ideaCard = document.createElement('div');
+                                ideaCard.className = 'module-card text-left animate-on-scroll';
+                                ideaCard.style.animationDelay = `${index * 0.1}s`;
+                                ideaCard.innerHTML = `
+                                    <p class="font-bold text-sm accent-color">IDEA ${index + 1}</p>
+                                    <h4 class="font-bold text-white mt-2">Hook:</h4>
+                                    <p class="text-gray-300">${idea.hook}</p>
+                                    <h4 class="font-bold text-white mt-4">Content:</h4>
+                                    <p class="text-gray-300">${idea.content}</p>
+                                    <h4 class="font-bold text-white mt-4">Call to Action:</h4>
+                                    <p class="text-gray-300">${idea.cta}</p>
+                                `;
+                                ideasOutput.appendChild(ideaCard);
+                                 // Re-trigger animation for newly added card
+                                setTimeout(() => observer.observe(ideaCard), 10);
+                            });
+                            return; // Success, exit loop
+                        } else {
+                            throw new Error("No content generated or unexpected response format.");
+                        }
+
+                    } catch (error) {
+                        console.error("Error calling Gemini API:", error);
+                        retries = 0; // Stop retrying on other errors
+                    }
+                }
+
+                // If loop finishes due to error or retries exceeded
+                loadingSpinner.style.display = 'none';
+                generateBtn.disabled = false;
+                generateBtn.innerHTML = 'Generate Ideas ✨';
+                ideasOutput.innerHTML = `<p class="text-red-400">Sorry, something went wrong. Please try again later.</p>`;
+
             });
         });
     </script>
