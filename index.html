@@ -3,813 +3,473 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxanta - Your Instant Digital Product Empire & Masterclass</title>
-    
-    <!-- SEO & Social Sharing Meta Tags -->
-    <meta name="description" content="Luxanta gives you 1,000+ DFY digital products AND the complete masterclass on how to create, market, and sell them with high-converting landing pages. Pay once, profit forever.">
-    <meta property="og:title" content="Luxanta - Your Instant Digital Product Empire & Masterclass">
-    <meta property="og:description" content="Get 1,000+ DFY digital products and the A-Z training system to build a real, profitable online business.">
-    <meta property="og:image" content="https://placehold.co/1200x630/111827/FBBF24?text=Luxanta">
-    <meta property="og:url" content="https://your-domain.com">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Luxanta - Your Instant Digital Product Empire & Masterclass">
-    <meta name="twitter:description" content="Get 1,000+ DFY digital products and the A-Z training system to build a real, profitable online business.">
-    <meta name="twitter:image" content="https://placehold.co/1200x630/111827/FBBF24?text=Luxanta">
-    
-    <!-- Favicons and FB Verification -->
-    <meta name="facebook-domain-verification" content="clhmn9i6ousayk4ussi3j3yafwuir4" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="shortcut icon" href="favicon.ico">
-
+    <title>The IG Profit Engine - From 1k Followers to $10k/Month</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --brand-primary: #4F46E5;
-            --brand-secondary: #FBBF24;
-            --brand-dark: #111827;
-            --brand-light: #F9FAFB;
-        }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--brand-dark);
-            color: var(--brand-light);
-            scroll-behavior: smooth;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .accent-color {
+            color: #80D9FF;
+        }
+        .bg-accent-color {
+            background-color: #80D9FF;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(180deg, #FFFFFF 0%, #AFAFAF 100%);
+            color: #000000;
+            padding: 0.75rem 2rem;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 999px;
+            text-align: center;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+        .section-padding {
+            padding: 5rem 1.5rem;
         }
         .gradient-text {
-            background: linear-gradient(90deg, var(--brand-secondary), #F59E0B);
+            background: linear-gradient(90deg, #ffffff, #80D9FF);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .cta-button {
-            transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+        .testimonial-card, .module-card, .feature-card {
+             background-color: #0a0a0a;
+             border: 1px solid #222;
+             padding: 1.5rem;
+             border-radius: 1rem;
+             transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 30px rgba(251, 191, 36, 0.6);
-        }
-        .feature-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 1.5rem;
-            transition: all 0.3s ease;
+        .testimonial-card:hover, .module-card:hover {
+            transform: translateY(-5px);
+            border-color: #80D9FF;
+            box-shadow: 0 10px 25px rgba(128, 217, 255, 0.1);
         }
         .feature-card:hover {
-            border-color: var(--brand-secondary);
+            border-color: #80D9FF;
+            box-shadow: 0 0 30px rgba(128, 217, 255, 0.2);
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.1);
         }
-        .timer-box {
-            background: rgba(0,0,0,0.3);
-            border-radius: 0.5rem;
-            padding: 0.5rem 1rem;
+        .feature-card svg {
+            transition: transform 0.3s ease, filter 0.3s ease;
         }
-        .shimmer-bg {
+        .feature-card:hover svg {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 10px #80D9FF);
+        }
+        .hero-grid-background {
             position: relative;
+            background-color: #000;
             overflow: hidden;
-            background: linear-gradient(110deg, var(--brand-dark) 8%, #1f2937 18%, var(--brand-dark) 33%);
-            background-size: 200% 100%;
-            animation: shimmer 5s linear infinite;
         }
-        @keyframes shimmer {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-        .faq-item {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .faq-item summary::-webkit-details-marker {
-            display: none;
-        }
-        .faq-item[open] summary .plus-icon { display: none; }
-        .faq-item:not([open]) summary .minus-icon { display: none; }
-        
-        .book-container {
-            transform-style: preserve-3d;
-            transition: transform 0.5s ease;
-        }
-        .book-container:hover {
-            transform: rotateY(-10deg) rotateX(2deg) scale(1.05);
-        }
-        .book-cover {
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), inset 2px 0 5px rgba(255,255,255,0.1);
-        }
-        .book-spine {
-            box-shadow: inset 5px 0px 15px rgba(0,0,0,0.4);
+        .hero-grid-background::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150%;
+            padding-bottom: 150%;
+            transform: translate(-50%, -50%);
+            background-image: radial-gradient(circle at center, rgba(0, 255, 255, 0.15) 0%, transparent 40%),
+                              repeating-radial-gradient(circle at center, rgba(128, 217, 255, 0.2), rgba(128, 217, 255, 0.2) 1px, transparent 1px, transparent 20px);
+            background-size: 100% 100%, 40px 40px;
+            z-index: 0;
+            animation: rotateGrid 30s linear infinite;
         }
 
-         input[type=range] {
-            -webkit-appearance: none;
-            width: 100%;
-            background: transparent;
+        @keyframes rotateGrid {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
         }
-        input[type=range]:focus {
-            outline: none;
+
+        .final-cta-grid::before {
+             mask-image: radial-gradient(ellipse 80% 50% at 50% 100%, black 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 100%, black 40%, transparent 100%);
         }
-        input[type=range]::-webkit-slider-runnable-track {
-            width: 100%;
-            height: 8px;
-            cursor: pointer;
-            background: #374151;
-            border-radius: 5px;
+        .discover-icon {
+            filter: drop-shadow(0 0 8px #80D9FF);
         }
-        input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            height: 24px;
-            width: 24px;
-            border-radius: 50%;
-            background: var(--brand-secondary);
-            cursor: pointer;
-            margin-top: -8px;
-            box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px 0px rgba(128, 217, 255, 0.3); }
+            50% { box-shadow: 0 0 30px 5px rgba(128, 217, 255, 0.7); }
+        }
+        @keyframes card-glow-animation {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(128, 217, 255, 0.2); 
+                border-color: rgba(128, 217, 255, 0.7);
+            }
+            50% { 
+                box-shadow: 0 0 35px rgba(128, 217, 255, 0.4); 
+                border-color: #80D9FF;
+            }
+        }
+        .cta-glow {
+            animation: pulse-glow 3s infinite ease-in-out;
+        }
+        .card-glow {
+            animation: card-glow-animation 4s infinite ease-in-out;
+            border-color: #80D9FF;
+        }
+
+        /* Animations */
+        @keyframes fadeIn-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-on-scroll {
+            opacity: 0;
+        }
+        .is-visible {
+            animation: fadeIn-up 0.8s ease-out forwards;
         }
     </style>
-    <!-- Facebook Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '4177767735878464');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=4177767735878464&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
 </head>
 <body class="antialiased">
 
-    <header class="py-4 px-4 md:px-8 sticky top-0 z-50 bg-gray-900/50 backdrop-blur-lg border-b border-gray-800">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html">
-                <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#FBBF24;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <text x="3" y="28" font-family="'Inter', sans-serif" font-size="28" font-weight="900" fill="#E5E7EB">
-                        Lu
-                        <tspan fill="url(#goldGradient)">x</tspan>
-                        anta
-                    </text>
-                    <path d="M78 22.5 a 4 4 0 1 1 0 5 a 4 4 0 0 1 0 -5" fill="#111827"/>
-                    <path d="M78.5 24 l 3 1.5 l -3 1.5 z" fill="#E5E7EB"/>
-                    <path d="M3 35 h 144" stroke="url(#goldGradient)" stroke-width="2.5" stroke-linecap="round"/>
-                    <path d="M3 35 L 14 35 L 14 31" stroke="#E5E7EB" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M89 31 L 89 35 L 147 35" stroke="#E5E7EB" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-            <a href="#pricing" class="cta-button bg-gradient-to-r from-amber-400 to-yellow-500 text-gray-900 font-bold text-sm py-2 px-6 rounded-full hidden md:inline-block">
-                Get Instant Access
-            </a>
+    <!-- Hero Section -->
+    <header class="section-padding text-center hero-grid-background min-h-[80vh] md:min-h-screen flex flex-col justify-center">
+        <div class="container mx-auto max-w-4xl relative z-10">
+            <!-- Payment Notifications -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-10">
+                <!-- Stripe Notification -->
+                <div class="bg-[#1C1C1C] border border-[#333] rounded-xl p-3 flex items-center gap-3 w-full max-w-xs shadow-lg animate-on-scroll" style="box-shadow: 0px 10px 30px rgba(0,0,0,0.5), inset 0px 1px 1px rgba(255,255,255,0.1);">
+                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0 p-1">
+                        <img src="https://www.citypng.com/public/uploads/preview/hd-stripe-official-logo-png-701751694777755j0aa3puxte.png" alt="Stripe Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="text-left">
+                        <p class="font-bold text-white">Stripe</p>
+                        <p class="text-sm text-gray-400">You received a payment of $2,500.00</p>
+                    </div>
+                    <span class="text-xs text-gray-500 ml-auto self-start">55m ago</span>
+                </div>
+                <!-- Gumroad Notification -->
+                <div class="bg-[#1C1C1C] border border-[#333] rounded-xl p-3 flex items-center gap-3 w-full max-w-xs shadow-lg animate-on-scroll" style="animation-delay: 0.1s; box-shadow: 0px 10px 30px rgba(0,0,0,0.5), inset 0px 1px 1px rgba(255,255,255,0.1);">
+                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+                         <img src="https://w7.pngwing.com/pngs/755/240/png-transparent-gumroad-logo-thumbnail-tech-companies.png" alt="Gumroad Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-left">
+                        <p class="font-bold text-white">Gumroad</p>
+                        <p class="text-sm text-gray-400">New sale of IG Files for $67</p>
+                    </div>
+                    <span class="text-xs text-gray-500 ml-auto self-start">55m ago</span>
+                </div>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-on-scroll" style="animation-delay: 0.2s;">
+                Build & <span class="accent-color">Sell on Instagram</span> using the Creator OS
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 animate-on-scroll" style="animation-delay: 0.3s;">
+                Get Clients with Outbound & Short Form Content
+            </p>
+            
+            <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-gray-400 my-8 animate-on-scroll" style="animation-delay: 0.4s;">
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <span>Grow your IG to 100,000 followers</span>
+                </div>
+                <div class="flex items-center gap-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                    <span>Sell Simple Info Products Daily</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <span>Get paid $2500+ for simple services</span>
+                </div>
+            </div>
+
+            <div class="animate-on-scroll" style="animation-delay: 0.5s;">
+                <a href="#pricing" class="btn">GET INSTANT ACCESS</a>
+                <div class="flex justify-center items-center gap-2 mt-4">
+                    <div class="flex -space-x-2">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-black" src="https://placehold.co/32x32/80D9FF/000000?text=A" alt="User avatar">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-black" src="https://placehold.co/32x32/FFFFFF/000000?text=B" alt="User avatar">
+                        <img class="inline-block h-6 w-6 rounded-full ring-2 ring-black" src="https://placehold.co/32x32/FF80B5/000000?text=C" alt="User avatar">
+                    </div>
+                    <p class="text-sm text-gray-500">578+ PEOPLE HAVE ALREADY JOINED</p>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Announcement Bar -->
-    <div class="bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 text-center p-3 text-gray-900 font-semibold">
-        <span>⚠️ This Isn't Just Products. This Is The Entire A-Z Business Blueprint.</span>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="py-16 md:py-24 px-4 text-center shimmer-bg">
-        <div class="container mx-auto max-w-4xl">
-            <h1 class="text-4xl md:text-6xl font-black mb-4 leading-tight">
-                We Give You 1,000+ Digital Products To Sell & The <span class="gradient-text">Exact Blueprint To Sell Them</span>
-            </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Stop guessing. Get instant access to a massive library of ready-to-sell products AND a step-by-step masterclass that shows you exactly how to build converting funnels, run ads, and make daily sales.
+    <!-- What You Get: Business-in-a-Box Section -->
+    <section class="section-padding bg-[#050505]">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 animate-on-scroll">
+                Here's Exactly What You Get...
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12 animate-on-scroll" style="animation-delay: 0.2s;">
+                This isn't just a course. It's a complete <span class="text-white font-semibold">business-in-a-box</span>, giving you both the system to attract buyers and the products to sell.
             </p>
-            
-            <div class="flex justify-center items-center space-x-6 mb-10">
-                <div class="text-center">
-                    <p class="text-2xl font-bold text-white">350+</p>
-                    <p class="text-sm text-gray-400 uppercase tracking-wider">Entrepreneurs Empowered</p>
-                </div>
-                <div class="h-12 w-px bg-gray-700"></div>
-                <div class="text-center">
-                    <p class="text-2xl font-bold text-white">4.9/5</p>
-                    <p class="text-sm text-gray-400 uppercase tracking-wider">Average Rating</p>
-                </div>
-            </div>
-            
-            <div class="aspect-w-16 aspect-h-9 max-w-3xl mx-auto mb-8 bg-black rounded-2xl shadow-2xl overflow-hidden border-2 border-amber-400 relative">
-                <video class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop playsinline poster="https://placehold.co/1920x1080/111827/374151?text=Loading...">
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-futuristic-long-grid-tunnel-42475-large.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                 <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center h-full"><div class="text-center p-8"><i data-lucide="play-circle" class="w-16 h-16 text-amber-400 mx-auto opacity-75"></i><p class="mt-4 text-lg font-semibold text-white">Discover The Complete A-Z System</p></div></div>
-            </div>
-
-            <div class="flex flex-col items-center">
-                <a href="https://shopluxanta.gumroad.com/l/empire?wanted=true" class="cta-button bg-gradient-to-r from-amber-400 to-yellow-500 text-gray-900 font-bold text-xl md:text-2xl py-4 px-12 rounded-full inline-block mb-4">CLAIM MY EMPIRE KIT NOW!</a>
-                <p class="text-gray-400 mb-6">Pay Once. Profit Forever.</p>
-
-                <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
-                    <p class="text-amber-400 font-semibold mb-2">Special One-Time Price Ends In:</p>
-                    <div id="timer" class="flex space-x-2 justify-center text-white">
-                        <div class="timer-box"><span id="days" class="text-2xl font-bold">00</span><span class="text-xs block">Days</span></div>
-                        <div class="timer-box"><span id="hours" class="text-2xl font-bold">00</span><span class="text-xs block">Hours</span></div>
-                        <div class="timer-box"><span id="minutes" class="text-2xl font-bold">00</span><span class="text-xs block">Mins</span></div>
-                        <div class="timer-box"><span id="seconds" class="text-2xl font-bold">00</span><span class="text-xs block">Secs</span></div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 text-left">
+                <!-- Card 1: The System -->
+                <div class="feature-card p-6 animate-on-scroll flex items-start gap-4" style="animation-delay: 0.1s;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-color flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">1. The IG Profit Engine System</h3>
+                        <p class="text-gray-400">The complete step-by-step video course (40+ lessons) and Notion OS that guides you from zero to a profitable online business.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem & Agitation Section -->
-    <section class="py-16 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-5xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Building An Online Business Feels Impossible When You're Missing The Key Pieces.</h2>
-            <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-12">You've seen what's possible, but you're stuck. Every time you try to start, you hit the same painful roadblocks that kill your motivation:</p>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="feature-card p-8"><h3 class="text-xl font-bold mb-3 text-amber-400">The Product Problem</h3><p class="text-gray-300">You've bought PLR products before, but they're sitting on your hard drive because you don't know the secret to making them desirable or how to build a page that actually sells.</p></div>
-                <div class="feature-card p-8"><h3 class="text-xl font-bold mb-3 text-amber-400">The Traffic Problem</h3><p class="text-gray-300">You post content, but get zero engagement. You've thought about ads, but you're terrified of wasting money. Without a real traffic system, your business is invisible.</p></div>
-                <div class="feature-card p-8"><h3 class="text-xl font-bold mb-3 text-amber-400">The "No Plan" Problem</h3><p class="text-gray-300">You're stuck in 'analysis paralysis'. You see what's possible, but without a clear, proven plan to follow, you don't know where to start, so you end up doing nothing.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Luxanta Difference -->
-    <section class="py-16 px-4">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12">Stop Gambling. Start Building.</h2>
-            <div class="grid md:grid-cols-2 gap-8 text-left">
-                <div class="feature-card border-red-500/50 p-8">
-                    <h3 class="text-2xl font-bold text-red-400 mb-4">The Old Way</h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-start"><i data-lucide="x-circle" class="w-5 h-5 text-red-400 mr-3 mt-1 flex-shrink-0"></i>Buying incomplete courses</li>
-                        <li class="flex items-start"><i data-lucide="x-circle" class="w-5 h-5 text-red-400 mr-3 mt-1 flex-shrink-0"></i>Guessing how to build a good landing page</li>
-                        <li class="flex items-start"><i data-lucide="x-circle" class="w-5 h-5 text-red-400 mr-3 mt-1 flex-shrink-0"></i>Wasting money on ads that don't work</li>
-                        <li class="flex items-start"><i data-lucide="x-circle" class="w-5 h-5 text-red-400 mr-3 mt-1 flex-shrink-0"></i>Having products but no sales strategy</li>
-                        <li class="flex items-start"><i data-lucide="x-circle" class="w-5 h-5 text-red-400 mr-3 mt-1 flex-shrink-0"></i>Feeling overwhelmed and unsupported</li>
-                    </ul>
+                <!-- Card 2: DFY Products -->
+                <div class="feature-card p-6 card-glow animate-on-scroll flex items-start gap-4" style="animation-delay: 0.2s;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-color flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">2. The DFY Product Library</h3>
+                        <p class="text-gray-400">An entire arsenal of professionally-built digital products (eBooks, templates, courses) that you can rebrand and start selling as your own immediately.</p>
+                    </div>
                 </div>
-                <div class="feature-card border-green-500/50 p-8 bg-gray-800">
-                    <h3 class="text-2xl font-bold text-green-400 mb-4">The Luxanta Way</h3>
-                     <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"></i>A complete A-Z system. No missing pieces.</li>
-                        <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"></i>The exact funnel strategies we use to turn visitors into buyers.</li>
-                        <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"></i>An endless supply of luxury videos to fuel your ads & social media.</li>
-                        <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"></i>An entire arsenal of DFY products ready to sell.</li>
-                        <li class="flex items-start"><i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"></i>A step-by-step plan for clarity and action.</li>
-                    </ul>
+                <!-- Card 3: Client Toolkit -->
+                <div class="feature-card p-6 animate-on-scroll flex items-start gap-4" style="animation-delay: 0.3s;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-color flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">3. The Client Acquisition Toolkit</h3>
+                        <p class="text-gray-400">My personal collection of DM scripts, sales funnels, ad strategies, and outreach templates to attract high-paying clients on demand.</p>
+                    </div>
+                </div>
+                <!-- Card 4: Funnel Business -->
+                <div class="feature-card p-6 animate-on-scroll flex items-start gap-4" style="animation-delay: 0.4s;">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-color flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">4. DFY Business: Sell Funnels For A Living</h3>
+                        <p class="text-gray-400">A complete, standalone course teaching you how to start a profitable funnel-selling business, complete with its own DFY offers.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- **UPDATED** Glimpse Inside Your Arsenal Section -->
-    <section id="arsenal" class="py-16 bg-gray-900 px-4">
-        <div class="container mx-auto max-w-6xl text-center">
-            <h2 class="text-4xl md:text-5xl font-black mb-4">A Glimpse Inside Your Arsenal</h2>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-16">These aren't just files; they are beautifully crafted, high-value assets ready to become the cornerstone of your brand.</p>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 [perspective:2000px]">
-                <!-- Book 1: Funnel Growth Stack -->
-                <div class="space-y-3 book-container">
-                    <div class="relative w-full aspect-[3/4] [transform-style:preserve-3d]">
-                        <div class="absolute w-full h-full book-cover rounded-lg p-4 flex flex-col justify-between text-white bg-gradient-to-br from-blue-900 to-indigo-900">
-                            <span class="font-black text-3xl leading-tight [text-shadow:0_2px_4px_rgba(0,0,0,0.5)]">FUNNEL GROWTH STACK</span>
-                            <span class="text-xs font-bold self-end opacity-75">LUXANTA EXCLUSIVE</span>
-                        </div>
-                        <div class="absolute top-0 left-0 w-6 h-full bg-blue-900 book-spine rounded-l-lg transform origin-left [transform:rotateY(-90deg)]"></div>
-                    </div>
-                    <p class="font-semibold text-sm">Funnel Growth Stack</p>
-                </div>
-                <!-- Book 2: Close Every Cold Call -->
-                <div class="space-y-3 book-container">
-                     <div class="relative w-full aspect-[3/4] [transform-style:preserve-3d]">
-                        <div class="absolute w-full h-full book-cover rounded-lg p-4 flex flex-col justify-between text-white bg-gradient-to-br from-gray-800 to-black border-2 border-amber-400">
-                           <span class="text-amber-400 font-bold text-xs [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">A-Z GUIDE</span>
-                           <span class="font-black text-2xl leading-tight text-center my-auto [text-shadow:0_2px_4px_rgba(251,191,36,0.3)]">CLOSE EVERY COLD CALL</span>
-                           <i data-lucide="phone-call" class="w-6 h-6 text-amber-400 self-center"></i>
-                        </div>
-                         <div class="absolute top-0 left-0 w-6 h-full bg-gray-900 book-spine rounded-l-lg transform origin-left [transform:rotateY(-90deg)]"></div>
-                    </div>
-                    <p class="font-semibold text-sm">Close Every Cold Call</p>
-                </div>
-                <!-- Book 3: Scale With YouTube Ads -->
-                <div class="space-y-3 book-container">
-                     <div class="relative w-full aspect-[3/4] [transform-style:preserve-3d]">
-                        <div class="absolute w-full h-full book-cover rounded-lg p-4 flex flex-col justify-center items-center text-white bg-gradient-to-br from-red-600 to-red-800">
-                           <span class="font-black text-2xl leading-tight [text-shadow:0_2px_2px_rgba(0,0,0,0.5)]">SCALE WITH</span>
-                           <i data-lucide="youtube" class="w-16 h-16 my-2 drop-shadow-lg"></i>
-                           <span class="font-black text-3xl leading-tight [text-shadow:0_2px_2px_rgba(0,0,0,0.5)]">ADS</span>
-                        </div>
-                         <div class="absolute top-0 left-0 w-6 h-full bg-red-900 book-spine rounded-l-lg transform origin-left [transform:rotateY(-90deg)]"></div>
-                    </div>
-                    <p class="font-semibold text-sm">Scale With YouTube Ads</p>
-                </div>
-                <!-- Book 4: Productivity Prompts -->
-                <div class="space-y-3 book-container">
-                    <div class="relative w-full aspect-[3/4] [transform-style:preserve-3d]">
-                        <div class="absolute w-full h-full book-cover rounded-lg p-4 flex flex-col text-white bg-emerald-900 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px]">
-                            <div class="bg-emerald-900/80 backdrop-blur-sm p-2 text-center my-auto">
-                                <span class="font-black text-xl leading-tight [text-shadow:0_1px_3px_rgba(6,78,59,1)]">PRODUCTIVITY PROMPTS</span>
-                                <p class="text-xs opacity-80 mt-2">100+ Ready-to-use prompts for AI</p>
-                            </div>
-                        </div>
-                        <div class="absolute top-0 left-0 w-6 h-full bg-emerald-900 book-spine rounded-l-lg transform origin-left [transform:rotateY(-90deg)]"></div>
-                    </div>
-                    <p class="font-semibold text-sm">Productivity Prompts</p>
-                </div>
-                <!-- Book 5: Focus Mastery -->
-                <div class="space-y-3 book-container">
-                    <div class="relative w-full aspect-[3/4] [transform-style:preserve-3d]">
-                        <div class="absolute w-full h-full book-cover bg-black rounded-lg p-4 flex flex-col justify-center items-center text-white">
-                           <div class="w-24 h-24 rounded-full border-2 border-amber-400 flex items-center justify-center mb-4 shadow-[0_0_20px_theme(colors.amber.400)]">
-                               <span class="font-black text-4xl leading-tight tracking-widest gradient-text">FOCUS</span>
-                           </div>
-                           <span class="font-light text-xl tracking-[0.3em]">MASTERY</span>
-                        </div>
-                         <div class="absolute top-0 left-0 w-6 h-full bg-gray-900 book-spine rounded-l-lg transform origin-left [transform:rotateY(-90deg)]"></div>
-                    </div>
-                    <p class="font-semibold text-sm">Focus Mastery</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- An Arsenal For Every Ambition Section -->
-    <section class="py-16 px-4">
-        <div class="container mx-auto max-w-5xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold">An Arsenal for <span class="gradient-text">Every Ambition</span></h2>
-            <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto mb-12">Your kingdom isn't limited to one niche. Dominate any market you choose with our vast and diverse collection of cutting-edge assets.</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="feature-card p-6 text-center"><i data-lucide="dollar-sign" class="w-10 h-10 text-amber-400 mx-auto mb-4"></i><h3 class="font-bold">Finance & Wealth</h3></div>
-                <div class="feature-card p-6 text-center"><i data-lucide="trending-up" class="w-10 h-10 text-amber-400 mx-auto mb-4"></i><h3 class="font-bold">Business & Marketing</h3></div>
-                <div class="feature-card p-6 text-center"><i data-lucide="heart-pulse" class="w-10 h-10 text-amber-400 mx-auto mb-4"></i><h3 class="font-bold">Health & Wellness</h3></div>
-                <div class="feature-card p-6 text-center"><i data-lucide="sparkles" class="w-10 h-10 text-amber-400 mx-auto mb-4"></i><h3 class="font-bold">Personal Growth</h3></div>
-                <div class="feature-card p-6 text-center"><i data-lucide="layout-dashboard" class="w-10 h-10 text-amber-400 mx-auto mb-4"></i><h3 class="font-bold">Notion Templates</h3></div>
-                <div class="feature-card p-6 text-center"><i data-lucide="brain-circuit" class="w-10 h-10 text-amber-400 mx-auto mb-4"></i><h3 class="font-bold">Next-Gen AI Prompts</h3></div>
-                <div class="feature-card p-6 text-center"><i data-lucide="bot" class="w-10 h-10 text-amber-400 mx-auto mb-4"></i><h3 class="font-bold">Automation Templates</h3></div>
-                <div class="feature-card p-6 text-center"><i data-lucide="more-horizontal" class="w-10 h-10 text-amber-400 mx-auto mb-4"></i><h3 class="font-bold">And So Much More...</h3></div>
-            </div>
-        </div>
-    </section>
-    
-    <div id="restored-sections">
-        <!-- The Digital Empire Masterclass Section -->
-        <section class="py-16 bg-gray-900 px-4">
-            <div class="container mx-auto max-w-5xl text-center">
-                <h2 class="text-3xl md:text-4xl font-bold">Go Beyond 'Done-For-You' With The <span class="gradient-text">Digital Empire Masterclass</span></h2>
-                <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto mb-12">The products are your arsenal. This masterclass is your battle plan. We've bottled up the entire process, showing you exactly how to build a thriving digital products business from the ground up.</p>
-                <div class="grid md:grid-cols-2 gap-8 text-left">
-                    <div class="feature-card p-8">
-                        <i data-lucide="gem" class="w-10 h-10 text-amber-400 mb-4"></i>
-                        <h3 class="text-2xl font-bold text-white mb-3">Product Alchemy</h3>
-                        <p class="text-gray-300"><strong>What You'll Master:</strong> How to instantly rebrand any PLR product into a premium offer that people are excited to buy. You'll learn the art of creating unique bundles and positioning your products to stand out in any market.</p>
-                    </div>
-                    <div class="feature-card p-8 bg-gray-800 border-amber-400">
-                        <i data-lucide="layout-template" class="w-10 h-10 text-amber-400 mb-4"></i>
-                        <h3 class="text-2xl font-bold text-white mb-3">High-Conversion Funnels</h3>
-                        <p class="text-gray-300"><strong>What You'll Master:</strong> Our proven, copy-paste formula for building landing pages that convert. We'll give you the templates and teach you the psychological triggers that make people click 'Buy Now'.</p>
-                    </div>
-                    <div class="feature-card p-8">
-                        <i data-lucide="megaphone" class="w-10 h-10 text-amber-400 mb-4"></i>
-                        <h3 class="text-2xl font-bold text-white mb-3">Organic Marketing Engine</h3>
-                        <p class="text-gray-300"><strong>What You'll Master:</strong> How to use your 30,000+ luxury videos to create an automated content machine that attracts free, targeted traffic and builds a loyal following on platforms like Instagram & TikTok.</p>
-                    </div>
-                    <div class="feature-card p-8">
-                        <i data-lucide="target" class="w-10 h-10 text-amber-400 mb-4"></i>
-                        <h3 class="text-2xl font-bold text-white mb-3">Paid Ad Domination</h3>
-                        <p class="text-gray-300"><strong>What You'll Master:</strong> A simple, beginner-friendly system to run profitable Meta Ads. We'll show you how to turn a small ad budget into predictable daily sales, even if you've never run an ad before.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Earning Estimator Section -->
-        <section class="py-16 bg-gray-900 px-4">
-            <div class="container mx-auto max-w-3xl text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Could You Earn?</h2>
-                <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-12">This isn't a promise of income, but an illustration of the potential. Play with the numbers to see what's possible when you have your own digital product to sell.</p>
-                <div class="feature-card p-8 space-y-8">
-                    <div>
-                        <div class="flex justify-between items-center mb-2">
-                            <label for="price-slider" class="font-semibold">Your Product Price:</label>
-                            <span id="price-output" class="text-2xl font-bold gradient-text">$27</span>
-                        </div>
-                        <input id="price-slider" type="range" min="7" max="97" value="27" class="w-full">
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center mb-2">
-                            <label for="sales-slider" class="font-semibold">Sales Per Day:</label>
-                            <span id="sales-output" class="text-2xl font-bold gradient-text">5</span>
-                        </div>
-                        <input id="sales-slider" type="range" min="1" max="50" value="5" class="w-full">
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center pt-4">
-                        <div>
-                            <p class="text-gray-400 text-sm font-bold tracking-widest uppercase">DAILY</p>
-                            <p id="daily-revenue" class="text-3xl font-black text-white">$135</p>
-                        </div>
-                        <div>
-                            <p class="text-gray-400 text-sm font-bold tracking-widest uppercase">MONTHLY</p>
-                            <p id="monthly-revenue" class="text-3xl font-black text-white">$4,050</p>
-                        </div>
-                        <div>
-                            <p class="text-gray-400 text-sm font-bold tracking-widest uppercase">YEARLY</p>
-                            <p id="yearly-revenue" class="text-3xl font-black text-white">$48,600</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Who This Is For Section -->
-        <section id="who-is-it-for-2" class="py-16 px-4">
-            <div class="container mx-auto max-w-5xl text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12">This Complete System Is For...</h2>
-                <div class="grid md:grid-cols-2 gap-8 text-left">
-                    <div class="feature-card p-8">
-                        <i data-lucide="rocket" class="w-10 h-10 text-amber-400 mb-4"></i>
-                        <h3 class="text-2xl font-bold text-white mb-3">The Aspiring Entrepreneur</h3>
-                        <p class="text-gray-300"><strong>You're a beginner who's ready for a real plan.</strong> You want to start an online business but don't know where to begin. This system is your step-by-step map from zero to your first sale.</p>
-                    </div>
-                    <div class="feature-card p-8">
-                         <i data-lucide="gem" class="w-10 h-10 text-amber-400 mb-4"></i>
-                        <h3 class="text-2xl font-bold text-white mb-3">The Content Creator</h3>
-                        <p class="text-gray-300"><strong>You're a creator who wants to earn what you're worth.</strong> Stop relying on brand deals. We'll help you launch your own product line and turn your followers into loyal customers.</p>
-                    </div>
-                     <div class="feature-card p-8">
-                        <i data-lucide="briefcase" class="w-10 h-10 text-amber-400 mb-4"></i>
-                        <h3 class="text-2xl font-bold text-white mb-3">The Established Business Owner</h3>
-                        <p class="text-gray-300"><strong>You're a business owner looking for an easy income stream.</strong> Add a high-profit, low-effort digital product division to your company without the usual headaches of inventory or shipping.</p>
-                    </div>
-                     <div class="feature-card p-8">
-                         <i data-lucide="brain-circuit" class="w-10 h-10 text-amber-400 mb-4"></i>
-                        <h3 class="text-2xl font-bold text-white mb-3">The Skill Seeker</h3>
-                        <p class="text-gray-300"><strong>You want to learn the skills that actually make money online.</strong> This is a masterclass in the most valuable skills today: direct response copywriting, sales funnel architecture, and paid advertising.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- What's Included Section -->
-        <section class="py-16 bg-gray-900 px-4">
-            <div class="container mx-auto max-w-5xl text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">What's Included</h2>
-                <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-12">Everything you need to build a profitable digital product business from day one.</p>
-                
-                <div class="text-left space-y-12">
-                    <div>
-                        <h3 class="text-2xl font-bold text-amber-400 mb-6 text-center">Premium Features</h3>
-                        <div class="grid md:grid-cols-3 gap-8">
-                            <div class="feature-card p-6"><h4 class="font-bold text-white mb-2">Ultimate Digital Product Library™</h4><p class="text-gray-400 text-sm">Instantly unlock our exclusive collection of high-converting digital products.</p></div>
-                            <div class="feature-card p-6"><h4 class="font-bold text-white mb-2">Facebook Ads Mastery Course</h4><p class="text-gray-400 text-sm">Complete training to master Facebook advertising and scale your business.</p></div>
-                            <div class="feature-card p-6"><h4 class="font-bold text-white mb-2">Lifetime Access</h4><p class="text-gray-400 text-sm">Pay once, profit forever. Get unlimited access with no recurring fees.</p></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 class="text-2xl font-bold text-amber-400 mb-6 text-center">Profit-Ready Features</h3>
-                        <div class="grid md:grid-cols-3 gap-8">
-                            <div class="feature-card p-6"><h4 class="font-bold text-white mb-2">Profit-Ready Products 💰</h4><p class="text-gray-400 text-sm">Every product is tested and proven to generate sales, giving you a head start.</p></div>
-                            <div class="feature-card p-6"><h4 class="font-bold text-white mb-2">Full PLR Rights on All Products</h4><p class="text-gray-400 text-sm">Total creative control. Rebrand, edit, and resell every product as your own.</p></div>
-                            <div class="feature-card p-6"><h4 class="font-bold text-white mb-2">Over 1,000 Digital Products</h4><p class="text-gray-400 text-sm">An expansive collection of eBooks, courses, and templates in the hottest niches.</p></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 class="text-2xl font-bold text-amber-400 mb-6 text-center">Bonus Features</h3>
-                         <div class="grid md:grid-cols-4 gap-8">
-                            <div class="feature-card p-6"><h4 class="font-bold text-white mb-2">Monthly Product Drops</h4><p class="text-gray-400 text-sm">Stay ahead with fresh, high-demand products added to your library monthly.</p></div>
-                            <div class="feature-card p-6"><h4 class="font-bold text-white mb-2">30k+ Luxury Video Vault</h4><p class="text-gray-400 text-sm">Elevate your marketing with a huge collection of premium, royalty-free videos.</p></div>
-                            <div class="feature-card p-6"><h4 class="font-bold text-white mb-2">Built for Modern Creators</h4><p class="text-gray-400 text-sm">The perfect toolkit for solo founders ready to build their digital empire.</p></div>
-                            <div class="feature-card p-6"><h4 class="font-bold text-white mb-2">24/7 Priority Support</h4><p class="text-gray-400 text-sm">Never get stuck. Our dedicated support team is available around the clock.</p></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- The "Too Good To Be True" Offer Section -->
-        <section id="pricing" class="py-20 px-4 shimmer-bg">
-            <div class="container mx-auto max-w-4xl">
-                <div class="bg-gray-900 border-2 border-amber-400 rounded-3xl shadow-2xl p-8 md:p-12 text-center">
-                    <h2 class="text-3xl md:text-5xl font-black mb-4">Get Instant Access Now</h2>
-                    <p class="text-lg text-gray-300 mb-8">One-time payment. No hidden fees.</p>
-                    <div class="text-left max-w-2xl mx-auto space-y-4 mb-10">
-                        <div class="flex items-start space-x-3 p-3 bg-gray-800 rounded-lg"><i data-lucide="check" class="w-5 h-5 text-green-400 flex-shrink-0 mt-1"></i><p><strong>1,000+ Digital Products with PLR</strong></p></div>
-                        <div class="flex items-start space-x-3 p-3 bg-gray-800 rounded-lg"><i data-lucide="check" class="w-5 h-5 text-green-400 flex-shrink-0 mt-1"></i><p><strong>Facebook Ads Mastery Course</strong></p></div>
-                        <div class="flex items-start space-x-3 p-3 bg-gray-800 rounded-lg"><i data-lucide="check" class="w-5 h-5 text-green-400 flex-shrink-0 mt-1"></i><p><strong>30,000+ Luxury Video Gallery</strong></p></div>
-                        <div class="flex items-start space-x-3 p-3 bg-gray-800 rounded-lg"><i data-lucide="check" class="w-5 h-5 text-green-400 flex-shrink-0 mt-1"></i><p><strong>Monthly Product Updates</strong></p></div>
-                        <div class="flex items-start space-x-3 p-3 bg-gray-800 rounded-lg"><i data-lucide="check" class="w-5 h-5 text-green-400 flex-shrink-0 mt-1"></i><p><strong>Lifetime Access (No Recurring Fees)</strong></p></div>
-                        <div class="flex items-start space-x-3 p-3 bg-gray-800 rounded-lg"><i data-lucide="check" class="w-5 h-5 text-green-400 flex-shrink-0 mt-1"></i><p><strong>24/7 Premium Support</strong></p></div>
-                        <div class="flex items-start space-x-3 p-3 bg-gray-800 rounded-lg"><i data-lucide="check" class="w-5 h-5 text-green-400 flex-shrink-0 mt-1"></i><p><strong>Instant Download Access</strong></p></div>
-                        <div class="flex items-start space-x-3 p-3 bg-gray-800 rounded-lg"><i data-lucide="check" class="w-5 h-5 text-green-400 flex-shrink-0 mt-1"></i><p><strong>Commercial License Included</strong></p></div>
-                        <div class="flex items-start space-x-3 p-3 bg-gray-800 rounded-lg"><i data-lucide="check" class="w-5 h-5 text-green-400 flex-shrink-0 mt-1"></i><p><strong>Exclusive Member Community</strong></p></div>
-                    </div>
-                     <p class="text-2xl font-semibold mb-4">Get Everything Today For A Single Payment Of Just:</p>
-                    <p class="text-7xl font-black gradient-text mb-8">$47</p>
-                    <a href="https://shopluxanta.gumroad.com/l/empire?wanted=true" class="cta-button bg-gradient-to-r from-amber-400 to-yellow-500 text-gray-900 font-bold text-xl md:text-2xl py-5 px-16 rounded-full inline-block mb-4">GET INSTANT ACCESS NOW</a>
-                    <p class="text-gray-400 mt-4">🔒 30-Day No-Questions-Asked Money-Back Guarantee</p>
-                </div>
-            </div>
-        </section>
-        
-         <!-- Meet Your Mentor Section -->
-        <section class="py-16 px-4">
-            <div class="container mx-auto max-w-4xl">
-                <div class="feature-card p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
-                    <img src="https://placehold.co/150x150/FBBF24/111827?text=CEO" alt="Founder of Luxanta" class="rounded-full w-32 h-32 md:w-40 md:h-40 flex-shrink-0 border-4 border-amber-400">
-                    <div>
-                        <h3 class="text-3xl font-bold mb-2">A Message From The Founder</h3>
-                        <p class="text-gray-300 mb-4">"I created Luxanta because I was tired of seeing ambitious people get stuck. I pieced together the entire system I use for my own 5-figure months and put it all in one place, so you don't have to spend years figuring it out. This is the exact blueprint. The only thing missing is you."</p>
-                        <p class="font-bold text-amber-400">— Rifat Tanjil, Founder of Luxanta</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 1:1 Program Section -->
-        <section class="py-16 bg-gray-900 px-4">
-            <div class="container mx-auto max-w-3xl">
-                <div class="feature-card border-2 border-amber-400 p-8 md:p-10 text-center shadow-2xl shadow-amber-500/10">
-                    <h3 class="text-3xl font-black text-white">Want Personal Guidance to Fast-Track Your Success?</h3>
-                    <h2 class="text-4xl md:text-5xl font-black mb-4"><span class="gradient-text">Enroll Now (Full 1:1 Program)</span></h2>
-                    <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-6">Learn my secret strategies and the automated system I use to generate <span class="font-bold text-white">5-figures per month</span>. Get all your doubts cleared and receive a personalized roadmap to success on top of the complete masterclass.</p>
-                    <a href="https://shopluxanta.gumroad.com/l/nxzdbd" class="cta-button bg-gradient-to-r from-amber-400 to-yellow-500 text-gray-900 font-bold text-xl py-4 px-12 rounded-full inline-block">ENROLL IN 1:1 COACHING</a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Your Life in 30 Days Section -->
-        <section class="py-16 px-4">
-            <div class="container mx-auto max-w-3xl text-center">
-                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Imagine Your Life 30 Days From Now...</h2>
-                 <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-8">Stop trading time for money. Start building an asset that works for you.</p>
-                 <div class="space-y-4 text-left max-w-lg mx-auto">
-                    <div class="flex items-center space-x-4"><i data-lucide="bell" class="w-8 h-8 text-green-400 flex-shrink-0"></i><p class="text-lg">Waking up to the 'cha-ching' of sales notifications that came in while you slept.</p></div>
-                    <div class="flex items-center space-x-4"><i data-lucide="check-square" class="w-8 h-8 text-green-400 flex-shrink-0"></i><p class="text-lg">Feeling the pride of launching your first product, knowing the sales page is engineered to convert.</p></div>
-                    <div class="flex items-center space-x-4"><i data-lucide="mouse-pointer-click" class="w-8 h-8 text-green-400 flex-shrink-0"></i><p class="text-lg">Having a clear, repeatable plan to get new customers every day, instead of just hoping for them.</p></div>
-                    <div class="flex items-center space-x-4"><i data-lucide="trending-up" class="w-8 h-8 text-green-400 flex-shrink-0"></i><p class="text-lg">Owning a real, automated asset that makes you money, not just another side-hustle that drains your time.</p></div>
-                 </div>
-            </div>
-        </section>
-
-        <!-- Guarantee Section -->
-        <section class="py-16 bg-gray-900 px-4">
-            <div class="container mx-auto max-w-3xl">
-                <div class="feature-card p-8 md:p-10 flex flex-col md:flex-row items-center gap-8">
-                    <!-- SVG Guarantee Seal -->
-                    <div class="w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
-                       <svg viewBox="0 0 200 200" role="img" aria-label="30-Day Money-Back Guarantee Seal">
-                            <defs>
-                                <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
-                            </defs>
-                            <circle cx="100" cy="100" r="100" fill="#FBBF24" />
-                            <circle cx="100" cy="100" r="85" fill="none" stroke="#111827" stroke-width="5" />
-                            <text fill="#111827" font-size="22" font-weight="bold">
-                                <textPath xlink:href="#circlePath" startOffset="50%" text-anchor="middle">
-                                    ★ 30-DAY MONEY-BACK GUARANTEE ★
-                                </textPath>
-                            </text>
-                            <text x="100" y="115" text-anchor="middle" font-size="48" font-weight="900" fill="#111827">100%</text>
-                            <text x="100" y="145" text-anchor="middle" font-size="20" font-weight="bold" fill="#111827">RISK-FREE</text>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="text-3xl font-bold mb-4">Our "Build Your Empire" 30-Day Guarantee</h3>
-                        <p class="text-gray-300">We're so confident in the insane value of Luxanta that we're taking on all the risk. Join today, go through the masterclass, explore the products. If you don't feel you have everything you need to build your digital product business, simply email us within 30 days for a full, no-questions-asked refund.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="py-16 px-4">
-            <div class="container mx-auto max-w-3xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-                <div class="space-y-4">
-                     <details class="faq-item p-4 rounded-lg feature-card">
-                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
-                            Is the marketing and landing page training really included?
-                            <span class="text-amber-400">
-                                <i data-lucide="plus" class="plus-icon"></i>
-                                <i data-lucide="minus" class="minus-icon"></i>
-                            </span>
-                        </summary>
-                        <p class="mt-4 text-gray-400">Yes! This is what makes Luxanta different. You don't just get the products; you get the complete Digital Empire Masterclass which covers everything from product creation, building high-converting funnels, organic marketing, and paid Meta Ads.</p>
-                    </details>
-                    <details class="faq-item p-4 rounded-lg feature-card">
-                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
-                            Do I need any experience to start?
-                            <span class="text-amber-400">
-                                <i data-lucide="plus" class="plus-icon"></i>
-                                <i data-lucide="minus" class="minus-icon"></i>
-                            </span>
-                        </summary>
-                        <p class="mt-4 text-gray-400">Absolutely not. The entire masterclass is designed for complete beginners. We teach you everything from the ground up, assuming you know nothing about online business. It’s a step-by-step path from basic to advanced.</p>
-                    </details>
-                     <details class="faq-item p-4 rounded-lg feature-card">
-                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
-                            Can I do this with my smartphone?
-                            <span class="text-amber-400">
-                                <i data-lucide="plus" class="plus-icon"></i>
-                                <i data-lucide="minus" class="minus-icon"></i>
-                            </span>
-                        </summary>
-                        <p class="mt-4 text-gray-400">Yes, you can absolutely start, manage, and even make significant money using just your smartphone. However, for tasks like detailed design work or managing complex ad campaigns, a PC or laptop would be the best choice to help you scale your empire even faster.</p>
-                    </details>
-                    <details class="faq-item p-4 rounded-lg feature-card">
-                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
-                            Is this a one-time payment?
-                            <span class="text-amber-400">
-                                <i data-lucide="plus" class="plus-icon"></i>
-                                <i data-lucide="minus" class="minus-icon"></i>
-                            </span>
-                        </summary>
-                        <p class="mt-4 text-gray-400">Yes, it's a single one-time payment. You get lifetime access to all current products, the full masterclass, and all future monthly product drops. No hidden fees, no subscriptions, ever.</p>
-                    </details>
-                    <details class="faq-item p-4 rounded-lg feature-card">
-                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
-                            How do I get access after I pay?
-                            <span class="text-amber-400">
-                                <i data-lucide="plus" class="plus-icon"></i>
-                                <i data-lucide="minus" class="minus-icon"></i>
-                            </span>
-                        </summary>
-                        <p class="mt-4 text-gray-400">Instantly. After your secure payment, you'll be redirected to our members' area where you can access and download everything immediately. No waiting.</p>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final CTA Section -->
-        <section class="py-20 px-4 text-center">
-            <div class="container mx-auto max-w-4xl">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">You Have Two Choices...</h2>
-                <div class="grid md:grid-cols-2 gap-8 text-left">
-                    <div class="border-2 border-red-500 p-6 rounded-2xl">
-                        <h3 class="text-2xl font-bold mb-3">Choice #1: Do Nothing</h3>
-                        <p class="text-gray-300">Click away and keep searching for pieces of the puzzle, staying stuck in the same loop. The opportunity to get the complete A-Z system for less than the cost of a dinner out will be gone.</p>
-                    </div>
-                    <div class="border-2 border-green-500 p-6 rounded-2xl bg-gray-800">
-                        <h3 class="text-2xl font-bold mb-3">Choice #2: Take The Shortcut</h3>
-                        <p class="text-gray-300 mb-6">Click the button, make a tiny, risk-free investment, and get instant access to the entire system. Start building your profitable business in the next 5 minutes.</p>
-                        <a href="https://shopluxanta.gumroad.com/l/empire?wanted=true" class="cta-button w-full text-center bg-gradient-to-r from-amber-400 to-yellow-500 text-gray-900 font-bold text-xl py-4 px-8 rounded-full">
-                            I'M TAKING THE SHORTCUT!
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer class="text-center p-8 border-t border-gray-800">
+    <!-- Who This is For Section -->
+    <section class="section-padding">
         <div class="container mx-auto max-w-5xl">
-            <div class="grid md:grid-cols-3 gap-8 text-left mb-8">
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="font-bold text-lg mb-4 text-white">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html#pricing" class="text-gray-400 hover:text-amber-400 transition">Pricing</a></li>
-                        <li><a href="#arsenal" class="text-gray-400 hover:text-amber-400 transition">Arsenal</a></li>
-                        <li><a href="#faq" class="text-gray-400 hover:text-amber-400 transition">FAQ</a></li>
-                         <li><a href="contact.html" class="text-gray-400 hover:text-amber-400 transition">Contact Us</a></li>
-                    </ul>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll">This Complete System Is Built For...</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-gray-800 animate-on-scroll" style="animation-delay: 0.1s;">
+                    <h3 class="text-2xl font-bold accent-color">The Aspiring Entrepreneur</h3>
+                    <p class="mt-2 text-gray-300">You're a beginner ready for a real plan. This is your step-by-step map from zero to your first sale.</p>
                 </div>
-                <!-- Policies -->
-                <div>
-                    <h3 class="font-bold text-lg mb-4 text-white">Policies</h3>
-                    <ul class="space-y-2">
-                        <li><a href="terms.html" class="text-gray-400 hover:text-amber-400 transition">Terms of Service</a></li>
-                        <li><a href="privacy.html" class="text-gray-400 hover:text-amber-400 transition">Privacy Policy</a></li>
-                        <li><a href="refund.html" class="text-gray-400 hover:text-amber-400 transition">Refund Policy</a></li>
-                        <li><a href="disclaimer.html" class="text-gray-400 hover:text-amber-400 transition">Disclaimer</a></li>
-                    </ul>
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-gray-800 animate-on-scroll" style="animation-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold accent-color">The Content Creator</h3>
+                    <p class="mt-2 text-gray-300">You want to earn what you're worth. Stop relying on brand deals and launch your own products.</p>
                 </div>
-                <!-- Trust & Security -->
-                <div>
-                    <h3 class="font-bold text-lg mb-4 text-white">Secure Payments</h3>
-                     <div class="flex items-center space-x-2 text-gray-400 mb-4">
-                        <i data-lucide="lock" class="w-5 h-5 flex-shrink-0"></i>
-                        <span class="text-sm">SSL Secure Checkout</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                         <svg class="h-8 w-auto" viewBox="0 0 76 25" xmlns="http://www.w3.org/2000/svg"><path d="M24.18,0.02 C24.18,0.02 23.59,0 22.55,0 C20.21,0 18.23,1.83 18.23,4.53 C18.23,7.22 20.37,7.9 20.37,7.9 L24.18,9.45 C24.18,9.45 24.28,9.51 24.28,9.6 C24.28,10.39 23.13,10.82 22.17,10.82 C20.73,10.82 19.65,10.42 19.65,10.42 L19.06,12.8 C19.06,12.8 20.12,13.24 21.51,13.24 C24.33,13.24 26.47,11.64 26.47,8.87 C26.47,6.53 24.18,5.63 24.18,5.63 C24.18,5.63 22.06,4.8 22.06,4.32 C22.06,3.78 22.65,3.3 23.33,3.3 C24.21,3.3 24.7,3.58 24.7,3.58 L25.29,1.2 L24.18,0.02 Z M10.66,12.9 C10.27,11.53 10.04,10.42 10.04,10.42 C10.04,10.42 9.76,11.45 9.37,12.9 L7.28,12.9 L11.03,0.3 L14.07,0.3 L17.77,12.9 L14.77,12.9 C14.77,12.9 14.33,11.5 14.11,10.74 C14.11,10.74 12.34,10.74 11.98,10.74 C11.83,11.16 11.1,12.9 10.66,12.9 Z M12.55,8.03 C12.79,7.2 13.1,6.17 13.1,6.17 C13.1,6.17 13.27,6.79 13.41,7.5 L12.55,8.03 Z M38.44,8.96 C38.44,3.2 34.57,0.3 30.91,0.3 L25.44,0.3 L25.44,12.9 L28.69,12.9 L28.69,7.44 L29.63,7.44 C29.63,7.44 32.29,7.44 33.06,9.45 L34.93,12.9 L38.44,12.9 L38.44,8.96 Z M30.87,4.98 C30.87,4.98 28.69,4.98 28.69,4.98 L28.69,2.78 L30.87,2.78 C32.45,2.78 33.33,3.48 33.33,4.98 C33.33,6.48 32.41,7.44 30.87,7.44 L29.63,7.44 L30.87,4.98 Z M0.23,0.3 L3.16,0.3 L4.83,9.3 C4.83,9.3 4.98,9.9 4.98,9.9 C4.98,9.9 5.13,9.3 5.28,8.71 L6.93,0.3 L9.83,0.3 L6.53,12.9 L3.83,12.9 L0.23,0.3 Z" fill="#1A1F71"></path><path d="M48.47,0.02 C47.73,0.24 47.13,0.78 46.84,1.4 L42.76,10.12 L46.15,10.12 L48.47,4.2 C48.56,4.2 48.56,4.2 48.56,4.2 L50.18,10.12 L51.75,10.12 L56.16,0.02 L52.95,0.02 L51.13,4.2 L49.46,0.02 L48.47,0.02 Z M66.12,6.58 C66.12,9.43 63.53,10.37 61.83,10.37 C60.63,10.37 60,9.95 60,9.95 L59.57,12.04 C59.57,12.04 60.33,12.42 61.66,12.42 C64.53,12.42 66.63,10.88 66.63,7.99 C66.63,5.92 65.48,5.02 64.18,4.42 C62.95,3.87 62.33,3.47 62.33,2.94 C62.33,2.44 62.83,2.05 63.53,2.05 C64.43,2.05 65.27,2.05 65.27,2.05 L65.73,0 L63.83,0 C62.73,0 60.73,0.85 60.73,3.2 C60.73,5.1 62.13,5.74 63.63,6.34 C65.03,6.89 66.12,7.38 66.12,8.58 Z M75.23,3.2 C75.23,1.2 73.73,0 71.53,0 C69.33,0 67.73,1.2 67.73,3.2 C67.73,5.2 69.33,6.4 71.53,6.4 C73.73,6.4 75.23,5.2 75.23,3.2 Z M71.53,4.5 C70.23,4.5 69.33,3.9 69.33,3.2 C69.33,2.5 70.23,1.9 71.53,1.9 C72.83,1.9 73.73,2.5 73.73,3.2 C73.73,3.9 72.83,4.5 71.53,4.5 Z" fill="#F7A600"></path></svg>
-                         <svg class="h-8 w-auto" viewBox="0 0 40 25" xmlns="http://www.w3.org/2000/svg"><circle cx="12.5" cy="12.5" r="12.5" fill="#EA001B"></circle><circle cx="27.5" cy="12.5" r="12.5" fill="#F79E1B"></circle><path d="M20 12.5a12.5 12.5 0 0 1-5.36-1.54 12.5 12.5 0 0 0 0 3.08A12.5 12.5 0 0 1 20 12.5z" fill="#FF5F00"></path></svg>
-                         <svg class="h-8 w-auto" viewBox="0 0 60 25" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="25" rx="3" fill="#006FCF"></rect><text x="30" y="17.5" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">AMERICAN</text><text x="30" y="20.5" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle" dy="2">EXPRESS</text></svg>
-                    </div>
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-gray-800 animate-on-scroll" style="animation-delay: 0.3s;">
+                    <h3 class="text-2xl font-bold accent-color">The Established Business Owner</h3>
+                    <p class="mt-2 text-gray-300">You want a high-profit, low-effort income stream to add to your existing business.</p>
                 </div>
-            </div>
-
-            <div class="border-t border-gray-800 pt-8 mt-8 text-center">
-                 <p class="text-gray-500">&copy; <span id="copyright-year">2025</span> Luxanta. All Rights Reserved.</p>
-                 <p class="text-gray-500 text-sm mt-2">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+                <div class="bg-gray-900/50 p-6 rounded-lg border border-gray-800 animate-on-scroll" style="animation-delay: 0.4s;">
+                    <h3 class="text-2xl font-bold accent-color">The Skill Seeker</h3>
+                    <p class="mt-2 text-gray-300">You want to master the skills that actually make money online: copywriting, funnels, and paid ads.</p>
+                </div>
             </div>
         </div>
+    </section>
+    
+    <!-- Inside The Community Section -->
+    <section class="section-padding bg-black">
+        <div class="container mx-auto max-w-7xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-2 animate-on-scroll">Inside the Community</h2>
+            <p class="text-lg text-gray-400 mb-12 animate-on-scroll" style="animation-delay: 0.1s;">They Built Systems That Work</p>
+            <div id="testimonial-grid" class="columns-2 md:columns-3 lg:columns-4 gap-4 md:gap-6 space-y-4 md:space-y-6 animate-on-scroll" style="animation-delay: 0.2s;">
+                <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/iojsDWafZrBokLrUmnyNxFrztkk.png?scale-down-to=1024&width=1920&height=1080" alt="Testimonial 1" class="rounded-xl shadow-lg"></div>
+                <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/QF2xQaEyZQ92ZctCntDziT9u2xE.webp?scale-down-to=512&width=1068&height=944" alt="Testimonial 2" class="rounded-xl shadow-lg"></div>
+                <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/OUZZNITAV42srb0CjPhcOqpQOP4.webp?scale-down-to=512&width=700&height=682" alt="Testimonial 3" class="rounded-xl shadow-lg"></div>
+                <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/jsEfaClbpD6hqsVRXhCk3K6I.webp?width=671&height=928" alt="Testimonial 4" class="rounded-xl shadow-lg"></div>
+                <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/YAtotMSHpmxesOKxsiP6yAI5HVM.webp?scale-down-to=512&width=1078&height=985" alt="Testimonial 5" class="rounded-xl shadow-lg"></div>
+                <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/ishIeeOq5JPsaWP2Gc54Hc2tIS4.webp?scale-down-to=512&width=931&height=819" alt="Testimonial 6" class="rounded-xl shadow-lg"></div>
+                <div id="hidden-testimonials" class="hidden space-y-4 md:space-y-6">
+                    <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/63A5Yr4oqOO8IgBcVZgvaLECleM.webp?width=554&height=899" alt="Testimonial 7" class="rounded-xl shadow-lg"></div>
+                    <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/5PPxITw6whKviK520xp3z52cBU.webp?width=502&height=1043" alt="Testimonial 8" class="rounded-xl shadow-lg"></div>
+                    <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/hkNWEKu4iQ8m3vASP6y6yUD6lE.webp?scale-down-to=512&width=940&height=753" alt="Testimonial 9" class="rounded-xl shadow-lg"></div>
+                    <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/jRu7bBQQ6R8LWO8O0Q96PcftnhY.png?scale-down-to=512&width=956&height=949" alt="Testimonial 10" class="rounded-xl shadow-lg"></div>
+                    <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/yInQSlsGTDnYA243VDWLXWs5ATs.png?scale-down-to=512&width=1051&height=932" alt="Testimonial 11" class="rounded-xl shadow-lg"></div>
+                    <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/bVeRelwt4o5Dar97ukrXb1ceyYI.webp?scale-down-to=512&width=809&height=730" alt="Testimonial 12" class="rounded-xl shadow-lg"></div>
+                    <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/wGrB5lo5u2Ou1Q9orqAjoKCkTEQ.webp?scale-down-to=512&width=803&height=708" alt="Testimonial 13" class="rounded-xl shadow-lg"></div>
+                    <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/LxHBuIAXKdBoLFjiT2FBFz1fymM.png?width=561&height=861" alt="Testimonial 14" class="rounded-xl shadow-lg"></div>
+                    <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/Fu3aDRvF6NTDWppA749RmvVqU5s.webp?width=821&height=854" alt="Testimonial 15" class="rounded-xl shadow-lg"></div>
+                </div>
+            </div>
+            <div class="mt-12 text-center animate-on-scroll" style="animation-delay: 0.4s;">
+                <button id="show-more-btn" class="bg-accent-color/10 border border-accent-color text-accent-color font-semibold py-3 px-6 rounded-full hover:bg-accent-color/20 transition cta-glow">
+                    Show More 
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Dashboard Section -->
+    <section class="section-padding bg-black">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-12">
+                 <h2 class="text-3xl md:text-4xl font-bold animate-on-scroll">
+                    Peek Inside The <span class="accent-color">IG Creator Profit Engine</span>
+                </h2>
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mt-4 animate-on-scroll" style="animation-delay: 0.2s;">
+                    Your Master Dashboard for building, selling, and scaling on Instagram.
+                </p>
+            </div>
+            <div class="bg-[#0A0A0A] border border-[#222] rounded-2xl p-8 animate-on-scroll" style="animation-delay: 0.3s;">
+                <h3 class="text-2xl font-bold mb-6 text-gray-300">→ IG Creator Profit Engine // Master Dashboard</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Column 1 -->
+                    <div class="space-y-4">
+                        <p class="font-semibold text-gray-500 text-sm">→ PROGRAM</p>
+                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">♨️ START HERE</a>
+                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">📖 Program Lessons (IGC)</a>
+                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">📖 IG Clients Guide</a>
+                    </div>
+                    <!-- Column 2 -->
+                    <div class="space-y-4">
+                        <p class="font-semibold text-gray-500 text-sm">→ AI ASSETS</p>
+                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">All Prompts</a>
+                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">Custom GPT’s</a>
+                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">Your Own GPT’s</a>
+                    </div>
+                    <!-- Column 3 -->
+                    <div class="space-y-4">
+                        <p class="font-semibold text-gray-500 text-sm">→ GO VIRAL W/ REELS</p>
+                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">✍️ Ideation Process</a>
+                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">✍️ Scripting Process</a>
+                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">📂 Competitor Files</a>
+                    </div>
+                    <!-- Column 4 -->
+                    <div class="space-y-4">
+                        <p class="font-semibold text-gray-500 text-sm">→ GET CLIENTS</p>
+                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">Outreach Files</a>
+                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">📤 Outreach Tracker</a>
+                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">📤 2 DFY Offers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sell Funnels for a Living Section -->
+    <section class="section-padding bg-[#050505]">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold animate-on-scroll">
+                    PLUS: You Get an Entire DFY Business
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold accent-color mt-2 mb-4 animate-on-scroll" style="animation-delay: 0.1s;">"Sell Funnels For A Living"</h3>
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12 animate-on-scroll" style="animation-delay: 0.2s;">
+                    This isn't just a bonus; it's a complete business-in-a-box. Get the full course and Notion database to start your own profitable funnel-selling agency.
+                </p>
+            </div>
+            <div class="space-y-4 animate-on-scroll" style="animation-delay: 0.3s;">
+                <div class="bg-[#111] p-4 rounded-lg border border-[#282828]">
+                    <p class="font-bold text-lg">📌 Introduction & Getting Started</p>
+                    <p class="text-gray-400 mt-1">🟢 The Art of Selling Funnels, 🌀 Road to your first $1000, 🌀 Why we sell to coaches.</p>
+                </div>
+                <div class="bg-[#111] p-4 rounded-lg border border-[#282828]">
+                    <p class="font-bold text-lg">📌 DFY Funnel Offers & Branding</p>
+                    <p class="text-gray-400 mt-1">📙 Structuring a No-brainer Offer, 📙 3 DFY Funnel Offers, 🟡 Expert Positioning, 🟡 Creating a Client Magnet.</p>
+                </div>
+                <div class="bg-[#111] p-4 rounded-lg border border-[#282828]">
+                    <p class="font-bold text-lg">📌 Outreach, Sales & Delivery</p>
+                    <p class="text-gray-400 mt-1">🗨️ LinkedIn & IG Outreach Gameplans, 🧧 Sales Page Copywriting, 🔥 Preparing for Sales Calls.</p>
+                </div>
+                <div class="bg-[#111] p-4 rounded-lg border border-[#282828]">
+                    <p class="font-bold text-lg">📌 Extras & Resources</p>
+                    <p class="text-gray-400 mt-1">📂 The 6-Figure Funnel Revamp System, 👨‍💻 7+ Quality Clients in 45 days, 💳 In-mail scripts for LinkedIn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final Offer Stack & CTA -->
+    <section id="pricing" class="section-padding bg-gray-900/70 grid-background final-cta-grid">
+        <div class="container mx-auto max-w-4xl text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 animate-on-scroll">Here’s Everything You Get Today</h2>
+            <div class="bg-black border border-gray-800 rounded-lg p-8 max-w-2xl mx-auto text-left mb-8 animate-on-scroll" style="animation-delay: 0.2s;">
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex justify-between items-center"><span>The IG Profit Engine Program (40+ Lessons)</span> <span class="text-white font-semibold">$497 Value</span></li>
+                    <li class="flex justify-between items-center"><span>The Notion Creators OS</span> <span class="text-white font-semibold">$197 Value</span></li>
+                    <li class="flex justify-between items-center"><span>Private Discord Community Access</span> <span class="text-white font-semibold">$97 Value</span></li>
+                    <li class="flex justify-between items-center accent-color"><span>BONUS: Sales Page Copywriting Guide</span> <span class="font-semibold">$47 Value</span></li>
+                    <li class="flex justify-between items-center accent-color"><span>BONUS: IG Creator Assets</span> <span class="font-semibold">$97 Value</span></li>
+                    <li class="flex justify-between items-center accent-color"><span>BONUS: Sell Funnels For A Living</span> <span class="font-semibold">$67 Value</span></li>
+                    <li class="flex justify-between items-center accent-color"><span>BONUS: Paid Ad Domination Masterclass</span> <span class="font-semibold">$197 Value</span></li>
+                     <li class="flex justify-between items-center accent-color"><span>BONUS: Arsenal of DFY Resellable Products</span> <span class="font-semibold">$297 Value</span></li>
+                </ul>
+                <hr class="border-gray-700 my-4">
+                <div class="flex justify-between items-center text-xl">
+                    <span class="font-bold text-white">Total Value:</span>
+                    <span class="font-bold text-white">$1,496</span>
+                </div>
+            </div>
+            <p class="text-lg text-gray-300 animate-on-scroll" style="animation-delay: 0.4s;">Get Everything Today For Just One Payment Of</p>
+            <p class="text-7xl md:text-8xl font-extrabold my-4 accent-color animate-on-scroll" style="animation-delay: 0.5s;">$97</p>
+            <a href="#" class="btn text-xl md:text-2xl animate-on-scroll cta-glow" style="animation-delay: 0.6s;">YES, I'M READY! GIVE ME INSTANT ACCESS</a>
+             <p class="text-sm text-gray-500 mt-3 animate-on-scroll" style="animation-delay: 0.7s;">Instant Digital Access • Secure Checkout • 30-Day Money-Back Guarantee</p>
+        </div>
+    </section>
+
+    <footer class="text-center p-8">
+        <p class="text-gray-600">&copy; 2025 IG Profit Engine. All Rights Reserved.</p>
     </footer>
 
     <script>
-        window.onload = () => {
-            // This ensures all scripts run only after the entire page is loaded.
-            
-            // Initialize Lucide Icons
-            try {
-                lucide.createIcons();
-            } catch (e) {
-                console.error("Lucide icons could not be initialized.", e);
-            }
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.1
+            };
 
-            // Countdown Timer
-            function startTimer() {
-                const countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
-                const timerElement = document.getElementById("timer");
-                if (!timerElement) {
-                    console.error("Timer element not found");
-                    return;
-                }
-
-                const daysEl = document.getElementById("days");
-                const hoursEl = document.getElementById("hours");
-                const minutesEl = document.getElementById("minutes");
-                const secondsEl = document.getElementById("seconds");
-
-                if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
-                    console.error("One or more timer display elements are missing.");
-                    return;
-                }
-
-                const x = setInterval(function() {
-                    const now = new Date().getTime();
-                    const distance = countDownDate - now;
-
-                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    daysEl.textContent = String(days).padStart(2, '0');
-                    hoursEl.textContent = String(hours).padStart(2, '0');
-                    minutesEl.textContent = String(minutes).padStart(2, '0');
-                    secondsEl.textContent = String(seconds).padStart(2, '0');
-                    
-                    if (distance < 0) {
-                        clearInterval(x);
-                        timerElement.innerHTML = "<div class='text-red-500 font-bold'>OFFER EXPIRED</div>";
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
                     }
-                }, 1000);
-            }
-            startTimer();
-            
-            // Auto-update copyright year
-            const yearSpan = document.getElementById('copyright-year');
-            if(yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
+                });
+            }, observerOptions);
 
-            // Earning Estimator
-            const priceSlider = document.getElementById('price-slider');
-            const salesSlider = document.getElementById('sales-slider');
-            const priceOutput = document.getElementById('price-output');
-            const salesOutput = document.getElementById('sales-output');
-            const dailyRevenue = document.getElementById('daily-revenue');
-            const monthlyRevenue = document.getElementById('monthly-revenue');
-            const yearlyRevenue = document.getElementById('yearly-revenue');
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            elements.forEach(el => {
+                observer.observe(el);
+            });
 
-            function updateEstimator() {
-                if (!priceSlider || !salesSlider || !priceOutput || !salesOutput || !dailyRevenue || !monthlyRevenue || !yearlyRevenue) {
-                     console.error("One or more estimator elements are missing.");
-                    return;
-                }
-                const price = parseInt(priceSlider.value) || 0;
-                const sales = parseInt(salesSlider.value) || 0;
-                const daily = price * sales;
-                const monthly = daily * 30;
-                const yearly = daily * 365;
+            const showMoreBtn = document.getElementById('show-more-btn');
+            const hiddenTestimonials = document.getElementById('hidden-testimonials');
+
+            showMoreBtn.addEventListener('click', () => {
+                hiddenTestimonials.classList.remove('hidden');
+                // Create a masonry effect for the newly added items
+                const testimonialGrid = document.getElementById('testimonial-grid');
+                testimonialGrid.classList.remove('columns-2', 'md:columns-3', 'lg:columns-4');
+                testimonialGrid.classList.add('columns-2', 'md:columns-3', 'lg:columns-4');
                 
-                priceOutput.textContent = `$${price}`;
-                salesOutput.textContent = sales.toString();
-                dailyRevenue.textContent = `$${daily.toLocaleString()}`;
-                monthlyRevenue.textContent = `$${monthly.toLocaleString()}`;
-                yearlyRevenue.textContent = `$${yearly.toLocaleString()}`;
-            }
+                // Animate the new items
+                const newItems = hiddenTestimonials.querySelectorAll('.break-inside-avoid');
+                 newItems.forEach((item, index) => {
+                    item.classList.add('animate-on-scroll');
+                    setTimeout(() => {
+                         observer.observe(item);
+                    }, index * 100);
+                });
 
-            if (priceSlider && salesSlider) {
-                priceSlider.addEventListener('input', updateEstimator);
-                salesSlider.addEventListener('input', updateEstimator);
-                updateEstimator(); // Run once on load
-            }
-        };
+                showMoreBtn.style.display = 'none';
+            });
+        });
     </script>
+
 </body>
 </html>
 
