@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The IG Profit Engine - From 1k Followers to $10k/Month</title>
+    <title>The Luxanta - The Digital Empire Bundle</title>
+    <!-- Payhip Script -->
     <script type="text/javascript" src="https://payhip.com/payhip.js"></script>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -17,60 +24,50 @@
         .accent-color {
             color: #80D9FF;
         }
-        .bg-accent-color {
-            background-color: #80D9FF;
-        }
-        .btn, .payhip-buy-button, #generate-ideas-btn {
+        
+        /* Premium Button Styling */
+        .btn, .payhip-buy-button {
             display: inline-block;
-            background: linear-gradient(180deg, #FFFFFF 0%, #AFAFAF 100%);
+            background: #80D9FF;
             color: #000000 !important;
-            padding: 0.75rem 2rem;
+            padding: 1rem 2.5rem;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 1.125rem;
             border-radius: 999px;
             text-align: center;
             text-decoration: none;
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 25px rgba(128, 217, 255, 0.3);
+            border: 1px solid rgba(128, 217, 255, 0.5);
             cursor: pointer;
         }
-        .btn:hover, .payhip-buy-button:hover, #generate-ideas-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        .btn:hover, .payhip-buy-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 35px rgba(128, 217, 255, 0.5);
         }
+        
         .section-padding {
-            padding: 5rem 1.5rem;
+            padding: 6rem 1.5rem;
         }
         .gradient-text {
             background: linear-gradient(90deg, #ffffff, #80D9FF);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .testimonial-card, .module-card, .feature-card {
+        .card {
              background-color: #0a0a0a;
              border: 1px solid #222;
-             padding: 1.5rem;
+             padding: 2rem;
              border-radius: 1rem;
              transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
-        .testimonial-card:hover, .module-card:hover {
+        .card:hover {
             transform: translateY(-5px);
             border-color: #80D9FF;
             box-shadow: 0 10px 25px rgba(128, 217, 255, 0.1);
         }
-        .feature-card:hover {
-            border-color: #80D9FF;
-            box-shadow: 0 0 30px rgba(128, 217, 255, 0.2);
-            transform: translateY(-5px);
-        }
-        .feature-card svg {
-            transition: transform 0.3s ease, filter 0.3s ease;
-        }
-        .feature-card:hover svg {
-            transform: scale(1.1);
-            filter: drop-shadow(0 0 10px #80D9FF);
-        }
+        
+        /* Background Grids */
         .hero-grid-background {
             position: relative;
             background-color: #000;
@@ -90,35 +87,35 @@
             z-index: 0;
             animation: rotateGrid 30s linear infinite;
         }
-
+        .final-cta-grid::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150%;
+            padding-bottom: 150%;
+            transform: translate(-50%, -50%);
+            background-image: radial-gradient(circle at center, rgba(0, 255, 255, 0.15) 0%, transparent 40%),
+                              repeating-radial-gradient(circle at center, rgba(128, 217, 255, 0.2), rgba(128, 217, 255, 0.2) 1px, transparent 1px, transparent 20px);
+            background-size: 100% 100%, 40px 40px;
+            z-index: 0;
+            animation: rotateGrid 30s linear infinite;
+            mask-image: radial-gradient(ellipse 80% 50% at 50% 100%, black 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 100%, black 40%, transparent 100%);
+        }
+        
         @keyframes rotateGrid {
             from { transform: translate(-50%, -50%) rotate(0deg); }
             to { transform: translate(-50%, -50%) rotate(360deg); }
         }
-
-        .final-cta-grid::before {
-             mask-image: radial-gradient(ellipse 80% 50% at 50% 100%, black 40%, transparent 100%);
-            -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 100%, black 40%, transparent 100%);
-        }
-        .discover-icon {
-            filter: drop-shadow(0 0 8px #80D9FF);
-        }
-        .version-badge {
-            display: inline-block;
-            background-color: rgba(128, 217, 255, 0.1);
-            color: #80D9FF;
-            font-size: 0.85rem;
-            font-weight: 700;
-            padding: 0.25rem 0.6rem;
-            border-radius: 999px;
-            border: 1px solid rgba(128, 217, 255, 0.3);
-            margin-left: 0.5rem;
-            vertical-align: middle;
-        }
-
+        
+        /* Glows */
         @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 15px 0px rgba(128, 217, 255, 0.3); }
-            50% { box-shadow: 0 0 30px 5px rgba(128, 217, 255, 0.7); }
+            0%, 100% { box-shadow: 0 0 20px 0px rgba(128, 217, 255, 0.4); }
+            50% { box-shadow: 0 0 40px 10px rgba(128, 217, 255, 0.8); }
+        }
+        .cta-glow {
+            animation: pulse-glow 3s infinite ease-in-out;
         }
         @keyframes card-glow-animation {
             0%, 100% { 
@@ -129,9 +126,6 @@
                 box-shadow: 0 0 35px rgba(128, 217, 255, 0.4); 
                 border-color: #80D9FF;
             }
-        }
-        .cta-glow {
-            animation: pulse-glow 3s infinite ease-in-out;
         }
         .card-glow {
             animation: card-glow-animation 4s infinite ease-in-out;
@@ -155,76 +149,41 @@
         .is-visible {
             animation: fadeIn-up 0.8s ease-out forwards;
         }
-        .loader {
-            border: 2px solid #1f2937;
-            border-top: 2px solid #80D9FF;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            animation: spin 1s linear infinite;
+        
+        /* Accordion */
+        details > summary {
+            list-style: none;
+            cursor: pointer;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .plus-icon {
+            display: none;
+        }
+        details:not([open]) summary .minus-icon {
+            display: none;
+        }
+        details[open] summary {
+            color: #80D9FF;
         }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Hero Section -->
-    <header class="section-padding text-center hero-grid-background min-h-[80vh] md:min-h-screen flex flex-col justify-center">
-        <div class="container mx-auto max-w-4xl relative z-10">
-            <!-- Payment Notifications -->
-            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-10">
-                <!-- Stripe Notification -->
-                <div class="bg-[#1C1C1C] border border-[#333] rounded-xl p-3 flex items-center gap-3 w-full max-w-xs shadow-lg animate-on-scroll" style="box-shadow: 0px 10px 30px rgba(0,0,0,0.5), inset 0px 1px 1px rgba(255,255,255,0.1);">
-                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0 p-1">
-                        <img src="https://www.citypng.com/public/uploads/preview/hd-stripe-official-logo-png-701751694777755j0aa3puxte.png" alt="Stripe Logo" class="w-full h-full object-contain">
-                    </div>
-                    <div class="text-left">
-                        <p class="font-bold text-white">Stripe</p>
-                        <p class="text-sm text-gray-400">You received a payment of $2,500.00</p>
-                    </div>
-                    <span class="text-xs text-gray-500 ml-auto self-start">55m ago</span>
-                </div>
-                <!-- Gumroad Notification -->
-                <div class="bg-[#1C1C1C] border border-[#333] rounded-xl p-3 flex items-center gap-3 w-full max-w-xs shadow-lg animate-on-scroll" style="animation-delay: 0.1s; box-shadow: 0px 10px 30px rgba(0,0,0,0.5), inset 0px 1px 1px rgba(255,255,255,0.1);">
-                    <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
-                         <img src="https://w7.pngwing.com/pngs/755/240/png-transparent-gumroad-logo-thumbnail-tech-companies.png" alt="Gumroad Logo" class="w-full h-full object-cover">
-                    </div>
-                    <div class="text-left">
-                        <p class="font-bold text-white">Gumroad</p>
-                        <p class="text-sm text-gray-400">New sale of IG Files for $67</p>
-                    </div>
-                    <span class="text-xs text-gray-500 ml-auto self-start">55m ago</span>
-                </div>
-            </div>
-
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-on-scroll" style="animation-delay: 0.2s;">
-                Build & <span class="accent-color">Sell on Instagram</span> using the Creator OS
+    <header class="section-padding text-center hero-grid-background min-h-screen flex flex-col justify-center">
+        <div class="container mx-auto max-w-5xl relative z-10">
+            <h1 class="text-4xl md:text-7xl font-extrabold leading-tight mb-6 animate-on-scroll">
+                Get 1,000+ Digital Products, 30K+ Videos, & The Complete <span class="gradient-text">Instagram Creator OS</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 animate-on-scroll" style="animation-delay: 0.3s;">
-                Get Clients with Outbound & Short Form Content
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 animate-on-scroll" style="animation-delay: 0.2s;">
+                Everything you need to build a profitable online business: Sell digital products, grow on Instagram, or get high-paying clients. 3 proven business models, one complete system from The Luxanta.
             </p>
             
-            <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-gray-400 my-8 animate-on-scroll" style="animation-delay: 0.4s;">
-                <div class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    <span>Grow your IG to 100,000 followers</span>
-                </div>
-                <div class="flex items-center gap-2">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
-                    <span>Sell Simple Info Products Daily</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    <span>Get paid $2500+ for simple services</span>
-                </div>
-            </div>
-
-            <div class="animate-on-scroll" style="animation-delay: 0.5s;">
-                <a href="https://payhip.com/b/RCiLW" class="payhip-buy-button btn" data-theme="blue" data-product="RCiLW">GET INSTANT ACCESS</a>
-                <div class="flex justify-center items-center gap-2 mt-4">
+            <div class="animate-on-scroll" style="animation-delay: 0.4s;">
+                <a href="https://payhip.com/b/RCiLW" class="payhip-buy-button btn text-lg px-8 py-4 cta-glow" data-theme="blue" data-product="RCiLW">Build Your Digital Empire For Just $97</a>
+                <div class="flex justify-center items-center gap-2 mt-6">
                     <div class="flex -space-x-2">
                         <img class="inline-block h-6 w-6 rounded-full ring-2 ring-black" src="https://placehold.co/32x32/80D9FF/000000?text=A" alt="User avatar">
                         <img class="inline-block h-6 w-6 rounded-full ring-2 ring-black" src="https://placehold.co/32x32/FFFFFF/000000?text=B" alt="User avatar">
@@ -236,106 +195,126 @@
         </div>
     </header>
 
-    <!-- What You Get: Business-in-a-Box Section -->
-    <section class="section-padding bg-[#050505]">
-        <div class="container mx-auto max-w-5xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 animate-on-scroll">
-                Here's Exactly What You Get...
-            </h2>
-            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12 animate-on-scroll" style="animation-delay: 0.2s;">
-                This isn't just a course. It's a complete <span class="text-white font-semibold">business-in-a-box</span>, giving you both the system to attract buyers and the products to sell.
-            </p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 text-left">
-                <!-- Card 1: The System -->
-                <div class="feature-card p-6 animate-on-scroll flex items-start gap-4" style="animation-delay: 0.1s;">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-color flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-2">1. The IG Profit Engine System</h3>
-                        <p class="text-gray-400">The complete step-by-step video course (40+ lessons) and Notion OS that guides you from zero to a profitable online business.</p>
-                    </div>
-                </div>
-                <!-- Card 2: DFY Products -->
-                <div class="feature-card p-6 card-glow animate-on-scroll flex items-start gap-4" style="animation-delay: 0.2s;">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-color flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-2">2. The DFY Product Library</h3>
-                        <p class="text-gray-400">An entire arsenal of professionally-built digital products (eBooks, templates, courses) that you can rebrand and start selling as your own immediately.</p>
-                    </div>
-                </div>
-                <!-- Card 3: Client Toolkit -->
-                <div class="feature-card p-6 animate-on-scroll flex items-start gap-4" style="animation-delay: 0.3s;">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-color flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-2">3. The Client Acquisition Toolkit</h3>
-                        <p class="text-gray-400">My personal collection of DM scripts, sales funnels, ad strategies, and outreach templates to attract high-paying clients on demand.</p>
-                    </div>
-                </div>
-                <!-- Card 4: Funnel Business -->
-                <div class="feature-card p-6 animate-on-scroll flex items-start gap-4" style="animation-delay: 0.4s;">
-                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-accent-color flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-2">4. DFY Business: Sell Funnels For A Living</h3>
-                        <p class="text-gray-400">A complete, standalone course teaching you how to start a profitable funnel-selling business, complete with its own DFY offers.</p>
-                    </div>
-                </div>
+    <!-- The Problem Section -->
+    <section class="section-padding bg-black">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 animate-on-scroll">Everyone's selling you <span class="text-red-500">ONE</span> piece of the puzzle.</h2>
+            <div class="text-gray-400 text-lg md:text-xl space-y-4 max-w-2xl mx-auto">
+                <p class="animate-on-scroll" style="animation-delay: 0.1s;">→ <span class="text-white">"Buy my MRR products!"</span> ...but they don't teach you how to get traffic.</p>
+                <p class="animate-on-scroll" style="animation-delay: 0.2s;">→ <span class="text-white">"Buy my IG course!"</span> ...but they don't give you any products to sell.</p>
+                <p class="animate-on-scroll" style="animation-delay: 0.3s;">→ <span class="text-white">"Buy my client course!"</span> ...but they don't give you a complete system or proven offers.</p>
             </div>
+            <p class="text-2xl md:text-4xl font-bold text-gray-300 max-w-3xl mx-auto mt-12 animate-on-scroll" style="animation-delay: 0.4s;">
+                What if you got <span class="gradient-text">EVERYTHING</span> in one place?
+            </p>
         </div>
     </section>
-    
-    <!-- Who This is For Section -->
-    <section class="section-padding">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll">This Complete System Is Built For...</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-gray-900/50 p-6 rounded-lg border border-gray-800 animate-on-scroll" style="animation-delay: 0.1s;">
-                    <h3 class="text-2xl font-bold accent-color">The Aspiring Entrepreneur</h3>
-                    <p class="mt-2 text-gray-300">You're a beginner ready for a real plan. This is your step-by-step map from zero to your first sale.</p>
+
+    <!-- The Solution (What's Inside) Section -->
+    <section class="section-padding bg-[#050505]">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-12 animate-on-scroll">Introducing: The Digital Empire Bundle</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <!-- Module 1 -->
+                <div class="card p-8 animate-on-scroll" style="animation-delay: 0.1s;">
+                    <span class="text-4xl">💎</span>
+                    <h3 class="text-2xl font-bold my-4">Module 1: Digital Product Empire</h3>
+                    <p class="text-gray-400 mb-4">Get 1,000+ DFY digital products (health, finance, etc.) with Master Resell Rights, plus 30,000+ promo videos. Never create a product from scratch again.</p>
+                    <p class="font-semibold accent-color">Use this to: <span class="text-white">Sell & keep 100% profit.</span></p>
                 </div>
-                <div class="bg-gray-900/50 p-6 rounded-lg border border-gray-800 animate-on-scroll" style="animation-delay: 0.2s;">
-                    <h3 class="text-2xl font-bold accent-color">The Content Creator</h3>
-                    <p class="mt-2 text-gray-300">You want to earn what you're worth. Stop relying on brand deals and launch your own products.</p>
+                <!-- Module 2 -->
+                <div class="card p-8 animate-on-scroll card-glow" style="animation-delay: 0.2s; border-color: #80D9FF;">
+                    <span class="text-4xl">📱</span>
+                    <h3 class="text-2xl font-bold my-4">Module 2: Instagram Creator OS</h3>
+                    <p class="text-gray-400 mb-4">The complete Notion system to manage your IG business. Includes AI prompts, viral reel scripts, and a client-getting tracker with DFY offers.</p>
+                    <p class="font-semibold accent-color">Use this to: <span class="text-white">Get clients & grow your brand.</span></p>
                 </div>
-                <div class="bg-gray-900/50 p-6 rounded-lg border border-gray-800 animate-on-scroll" style="animation-delay: 0.3s;">
-                    <h3 class="text-2xl font-bold accent-color">The Established Business Owner</h3>
-                    <p class="mt-2 text-gray-300">You want a high-profit, low-effort income stream to add to your existing business.</p>
-                </div>
-                <div class="bg-gray-900/50 p-6 rounded-lg border border-gray-800 animate-on-scroll" style="animation-delay: 0.4s;">
-                    <h3 class="text-2xl font-bold accent-color">The Skill Seeker</h3>
-                    <p class="mt-2 text-gray-300">You want to master the skills that actually make money online: copywriting, funnels, and paid ads.</p>
+                <!-- Module 3 -->
+                <div class="card p-8 animate-on-scroll" style="animation-delay: 0.3s;">
+                    <span class="text-4xl">📢</span>
+                    <h3 class="text-2xl font-bold my-4">Module 3: FB Ads Mastery</h3>
+                    <p class="text-gray-400 mb-4">My proven ad strategies, copy templates, and scaling secrets to drive predictable traffic to your products or services.</p>
+                    <p class="font-semibold accent-color">Use this to: <span class="text-white">Scale your new business.</span></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gemini AI Idea Generator -->
+    <!-- The 3 Paths Section -->
     <section class="section-padding bg-black">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold animate-on-scroll">
-                ✨ Experience The <span class="accent-color">AI Power</span> Inside
-            </h2>
-            <p class="text-lg md:text-xl text-gray-400 mt-4 mb-8 animate-on-scroll" style="animation-delay: 0.2s;">
-                Get a taste of the AI magic that powers the IG Profit Engine. Enter your niche below to generate your first viral reel idea instantly.
-            </p>
-            <div class="max-w-xl mx-auto animate-on-scroll" style="animation-delay: 0.3s;">
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <input type="text" id="niche-input" placeholder="e.g., Fitness Coach, Graphic Designer..." class="w-full bg-[#111] border border-[#333] rounded-full px-6 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent-color">
-                    <button id="generate-ideas-btn" class="shrink-0">Generate Ideas ✨</button>
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-12 animate-on-scroll">3 Proven Paths to $10k/Month. Pick Yours.</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Path 1 -->
+                <div class="card p-6 animate-on-scroll" style="animation-delay: 0.1s;">
+                    <span class="text-2xl">⭐⭐⭐⭐⭐</span>
+                    <h3 class="text-2xl font-bold my-3 accent-color">PATH 1: Digital Product Seller</h3>
+                    <p class="text-gray-400 mb-4"><span class="font-bold text-white">Best For:</span> Complete Beginners</p>
+                    <ul class="text-left text-gray-300 space-y-2 list-disc list-inside">
+                        <li>Pick from 1,000+ DFY products.</li>
+                        <li>Use 30K+ videos to promote.</li>
+                        <li>Sell on Gumroad/Stan.</li>
+                        <li>Scale with FB Ads module.</li>
+                    </ul>
                 </div>
-            </div>
-            <div id="loading-spinner" class="mt-8 hidden justify-center">
-                <div class="loader"></div>
-            </div>
-            <div id="ideas-output" class="mt-8 grid gap-4">
-                <!-- AI Generated ideas will be injected here -->
+                <!-- Path 2 -->
+                <div class="card p-6 animate-on-scroll" style="animation-delay: 0.2s;">
+                    <span class="text-2xl">⭐⭐⭐⭐⭐</span>
+                    <h3 class="text-2xl font-bold my-3 accent-color">PATH 2: Service Provider</h3>
+                    <p class="text-gray-400 mb-4"><span class="font-bold text-white">Best For:</span> Getting Cash Fast</p>
+                    <ul class="text-left text-gray-300 space-y-2 list-disc list-inside">
+                        <li>Use the 2 DFY service offers.</li>
+                        <li>Use outreach scripts to find clients.</li>
+                        <li>Land your first client in 7-14 days.</li>
+                        <li>Deliver services using the OS.</li>
+                    </ul>
+                </div>
+                <!-- Path 3 -->
+                <div class="card p-6 animate-on-scroll" style="animation-delay: 0.3s;">
+                    <span class="text-2xl">⭐⭐⭐⭐⭐</span>
+                    <h3 class="text-2xl font-bold my-3 accent-color">PATH 3: Instagram Creator</h3>
+                    <p class="text-gray-400 mb-4"><span class="font-bold text-white">Best For:</span> Building a Brand</p>
+                    <ul class="text-left text-gray-300 space-y-2 list-disc list-inside">
+                        <li>Use the IG Creator OS to plan.</li>
+                        <li>Use the AI prompts to create.</li>
+                        <li>Use the Reels system to grow.</li>
+                        <li>Monetize your audience.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-    
-    <!-- Inside The Community Section -->
-    <section class="section-padding bg-black">
+
+    <!-- Who This Is For Section -->
+    <section class="section-padding bg-[#050505]">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 animate-on-scroll">You're a Perfect Fit For This If...</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-black p-6 rounded-lg border border-gray-800 animate-on-scroll" style="animation-delay: 0.1s;">
+                    <h3 class="text-2xl font-bold accent-color">...You're a Beginner</h3>
+                    <p class="mt-2 text-gray-300">You've never made money online and need done-for-you products and a step-by-step plan.</p>
+                </div>
+                <div class="bg-black p-6 rounded-lg border border-gray-800 animate-on-scroll" style="animation-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold accent-color">...You're a Creator</h3>
+                    <p class="mt-2 text-gray-300">You want to grow on Instagram and finally monetize your audience without relying on brand deals.</p>
+                </div>
+                <div class="bg-black p-6 rounded-lg border border-gray-800 animate-on-scroll" style="animation-delay: 0.3s;">
+                    <h3 class="text-2xl font-bold accent-color">...You're a Service Provider</h3>
+                    <p class="mt-2 text-gray-300">You're stuck trading time for money and need a system to find clients and sell digital products.</p>
+                </div>
+                <div class="bg-black p-6 rounded-lg border border-gray-800 animate-on-scroll" style="animation-delay: 0.4s;">
+                    <h3 class="text-2xl font-bold accent-color">...You're an Entrepreneur</h3>
+                    <p class="mt-2 text-gray-300">You want to add new, scalable income streams to your business without starting from scratch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="section-padding bg-black border-t border-gray-900">
         <div class="container mx-auto max-w-7xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-2 animate-on-scroll">Inside the Community</h2>
-            <p class="text-lg text-gray-400 mb-12 animate-on-scroll" style="animation-delay: 0.1s;">They Built Systems That Work</p>
+            <h2 class="text-3xl md:text-5xl font-bold mb-2 animate-on-scroll">Inside the Community</h2>
+            <p class="text-lg text-gray-400 mb-12 animate-on-scroll" style="animation-delay: 0.1s;">Real results from real students using these exact systems.</p>
             <div id="testimonial-grid" class="columns-2 md:columns-3 lg:columns-4 gap-4 md:gap-6 space-y-4 md:space-y-6 animate-on-scroll" style="animation-delay: 0.2s;">
                 <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/iojsDWafZrBokLrUmnyNxFrztkk.png?scale-down-to=1024&width=1920&height=1080" alt="Testimonial 1" class="rounded-xl shadow-lg"></div>
                 <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/QF2xQaEyZQ92ZctCntDziT9u2xE.webp?scale-down-to=512&width=1068&height=944" alt="Testimonial 2" class="rounded-xl shadow-lg"></div>
@@ -344,12 +323,9 @@
                 <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/YAtotMSHpmxesOKxsiP6yAI5HVM.webp?scale-down-to=512&width=1078&height=985" alt="Testimonial 5" class="rounded-xl shadow-lg"></div>
                 <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/ishIeeOq5JPsaWP2Gc54Hc2tIS4.webp?scale-down-to=512&width=931&height=819" alt="Testimonial 6" class="rounded-xl shadow-lg"></div>
                 <div id="hidden-testimonials" class="hidden space-y-4 md:space-y-6">
-                    <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/63A5Yr4oqOO8IgBcVZgvaLECleM.webp?width=554&height=899" alt="Testimonial 7" class="rounded-xl shadow-lg"></div>
-                    <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/5PPxITw6whKviK520xp3z52cBU.webp?width=502&height=1043" alt="Testimonial 8" class="rounded-xl shadow-lg"></div>
                     <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/hkNWEKu4iQ8m3vASP6y6yUD6lE.webp?scale-down-to=512&width=940&height=753" alt="Testimonial 9" class="rounded-xl shadow-lg"></div>
                     <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/jRu7bBQQ6R8LWO8O0Q96PcftnhY.png?scale-down-to=512&width=956&height=949" alt="Testimonial 10" class="rounded-xl shadow-lg"></div>
                     <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/yInQSlsGTDnYA243VDWLXWs5ATs.png?scale-down-to=512&width=1051&height=932" alt="Testimonial 11" class="rounded-xl shadow-lg"></div>
-                    <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/bVeRelwt4o5Dar97ukrXb1ceyYI.webp?scale-down-to=512&width=809&height=730" alt="Testimonial 12" class="rounded-xl shadow-lg"></div>
                     <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/wGrB5lo5u2Ou1Q9orqAjoKCkTEQ.webp?scale-down-to=512&width=803&height=708" alt="Testimonial 13" class="rounded-xl shadow-lg"></div>
                     <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/LxHBuIAXKdBoLFjiT2FBFz1fymM.png?width=561&height=861" alt="Testimonial 14" class="rounded-xl shadow-lg"></div>
                     <div class="break-inside-avoid"><img src="https://framerusercontent.com/images/Fu3aDRvF6NTDWppA749RmvVqU5s.webp?width=821&height=854" alt="Testimonial 15" class="rounded-xl shadow-lg"></div>
@@ -363,120 +339,114 @@
         </div>
     </section>
 
-    <!-- Master Dashboard Section -->
-    <section class="section-padding bg-black">
-        <div class="container mx-auto max-w-5xl">
-            <div class="text-center mb-12">
-                 <h2 class="text-3xl md:text-4xl font-bold animate-on-scroll">
-                    Peek Inside The <span class="accent-color">IG Creator Profit Engine</span>
-                </h2>
-                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mt-4 animate-on-scroll" style="animation-delay: 0.2s;">
-                    Your Master Dashboard for building, selling, and scaling on Instagram.
-                </p>
-            </div>
-            <div class="bg-[#0A0A0A] border border-[#222] rounded-2xl p-8 animate-on-scroll" style="animation-delay: 0.3s;">
-                <h3 class="text-2xl font-bold mb-6 text-gray-300">→ IG Creator Profit Engine // Master Dashboard</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Column 1 -->
-                    <div class="space-y-4">
-                        <p class="font-semibold text-gray-500 text-sm">→ PROGRAM</p>
-                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">♨️ START HERE</a>
-                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">📖 Program Lessons (IGC)</a>
-                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">📖 IG Clients Guide</a>
-                    </div>
-                    <!-- Column 2 -->
-                    <div class="space-y-4">
-                        <p class="font-semibold text-gray-500 text-sm">→ AI ASSETS</p>
-                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">All Prompts</a>
-                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">Custom GPT’s</a>
-                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">Your Own GPT’s</a>
-                    </div>
-                    <!-- Column 3 -->
-                    <div class="space-y-4">
-                        <p class="font-semibold text-gray-500 text-sm">→ GO VIRAL W/ REELS</p>
-                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">✍️ Ideation Process</a>
-                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">✍️ Scripting Process</a>
-                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">📂 Competitor Files</a>
-                    </div>
-                    <!-- Column 4 -->
-                    <div class="space-y-4">
-                        <p class="font-semibold text-gray-500 text-sm">→ GET CLIENTS</p>
-                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">Outreach Files</a>
-                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">📤 Outreach Tracker</a>
-                        <a href="#" class="block bg-[#111] p-4 rounded-lg border border-[#282828] hover:border-accent-color transition">📤 2 DFY Offers</a>
-                    </div>
+    <!-- Bonuses Section -->
+    <section class="section-padding bg-[#050505]">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 animate-on-scroll">Exclusive Launch Bonuses</h2>
+            <p class="text-lg text-yellow-400 mb-12 animate-on-scroll" style="animation-delay: 0.1s;">🎁 Bonuses only for the first 100 members.</p>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <!-- Bonus 1 -->
+                <div class="card p-6 animate-on-scroll" style="animation-delay: 0.2s;">
+                    <span class="text-3xl">🎁</span>
+                    <h3 class="text-2xl font-bold my-3">10 Viral Funnel Templates</h3>
+                    <p class="text-gray-400">Proven, high-converting templates for your sales pages, opt-in pages, and more. Just copy, paste, and add your product.</p>
                 </div>
+                <!-- Bonus 2 -->
+                <div class="card p-6 animate-on-scroll" style="animation-delay: 0.3s;">
+                    <span class="text-3xl">🎁</span>
+                    <h3 class="text-2xl font-bold my-3">50 High-Converting Ad Hooks</h3>
+                    <p class="text-gray-400">A swipe file of 50 proven hooks and scripts for your Facebook Ads and Reels, ready to be deployed.</p>
+                </div>
+                <!-- Bonus 3 -->
+                <div class="card p-6 animate-on-scroll" style="animation-delay: 0.4s;">
+                    <span class="text-3xl">🎁</span>
+                    <h3 class="text-2xl font-bold my-3">Private Reseller Group</h3>
+                    <p class="text-gray-400">Access to a private Telegram group to network, ask questions, and share wins with other digital entrepreneurs.</p>
+                </div>
+            </div>
+            <div class="mt-12 animate-on-scroll" style="animation-delay: 0.5s;">
+                <a href="https://payhip.com/b/RCiLW" class="payhip-buy-button btn text-lg px-8 py-4" data-theme="blue" data-product="RCiLW">Join Now & Unlock Bonuses</a>
             </div>
         </div>
     </section>
 
-    <!-- Sell Funnels for a Living Section -->
-    <section class="section-padding bg-[#050505]">
-        <div class="container mx-auto max-w-4xl">
-            <div class="text-center">
-                <h2 class="text-3xl md:text-4xl font-bold animate-on-scroll">
-                    PLUS: You Get an Entire DFY Business
-                </h2>
-                <h3 class="text-4xl md:text-5xl font-extrabold accent-color mt-2 mb-4 animate-on-scroll" style="animation-delay: 0.1s;">"Sell Funnels For A Living"</h3>
-                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12 animate-on-scroll" style="animation-delay: 0.2s;">
-                    This isn't just a bonus; it's a complete business-in-a-box. Get the full course and Notion database to start your own profitable funnel-selling agency.
+    <!-- Guarantee Section -->
+    <section class="section-padding bg-black">
+        <div class="container mx-auto max-w-3xl">
+            <div class="border-2 border-accent-color rounded-xl p-8 text-center bg-[#0A0A0A] animate-on-scroll">
+                <h2 class="text-3xl font-bold text-white mb-4">No Risk. Just Results.</h2>
+                <p class="text-gray-300 text-lg">
+                    If you don’t see value in the first 7 days, contact us — we’ll make it right. You either win or learn. We are here to support your success.
                 </p>
-            </div>
-            <div class="space-y-4 animate-on-scroll" style="animation-delay: 0.3s;">
-                <div class="bg-[#111] p-4 rounded-lg border border-[#282828]">
-                    <p class="font-bold text-lg">📌 Introduction & Getting Started</p>
-                    <p class="text-gray-400 mt-1">🟢 The Art of Selling Funnels, 🌀 Road to your first $1000, 🌀 Why we sell to coaches.</p>
-                </div>
-                <div class="bg-[#111] p-4 rounded-lg border border-[#282828]">
-                    <p class="font-bold text-lg">📌 DFY Funnel Offers & Branding</p>
-                    <p class="text-gray-400 mt-1">📙 Structuring a No-brainer Offer, 📙 3 DFY Funnel Offers, 🟡 Expert Positioning, 🟡 Creating a Client Magnet.</p>
-                </div>
-                <div class="bg-[#111] p-4 rounded-lg border border-[#282828]">
-                    <p class="font-bold text-lg">📌 Outreach, Sales & Delivery</p>
-                    <p class="text-gray-400 mt-1">🗨️ LinkedIn & IG Outreach Gameplans, 🧧 Sales Page Copywriting, 🔥 Preparing for Sales Calls.</p>
-                </div>
-                <div class="bg-[#111] p-4 rounded-lg border border-[#282828]">
-                    <p class="font-bold text-lg">📌 Extras & Resources</p>
-                    <p class="text-gray-400 mt-1">📂 The 6-Figure Funnel Revamp System, 👨‍💻 7+ Quality Clients in 45 days, 💳 In-mail scripts for LinkedIn.</p>
-                </div>
             </div>
         </div>
     </section>
     
     <!-- Final Offer Stack & CTA -->
-    <section id="pricing" class="section-padding bg-gray-900/70 grid-background final-cta-grid">
+    <section id="pricing" class="section-padding hero-grid-background final-cta-grid">
         <div class="container mx-auto max-w-4xl text-center relative z-10">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 animate-on-scroll">Here’s Everything You Get Today</h2>
-            <div class="bg-black border border-gray-800 rounded-lg p-8 max-w-2xl mx-auto text-left mb-8 animate-on-scroll" style="animation-delay: 0.2s;">
-                <ul class="space-y-3 text-gray-300">
-                    <li class="flex justify-between items-center"><span>The IG Profit Engine Program (40+ Lessons)</span> <span class="text-white font-semibold">$497 Value</span></li>
-                    <li class="flex justify-between items-center"><span>The Notion Creators OS</span> <span class="text-white font-semibold">$197 Value</span></li>
-                    <li class="flex justify-between items-center"><span>Private Discord Community Access</span> <span class="text-white font-semibold">$97 Value</span></li>
-                    <li class="flex justify-between items-center accent-color"><span>BONUS: Sales Page Copywriting Guide</span> <span class="font-semibold">$47 Value</span></li>
-                    <li class="flex justify-between items-center accent-color"><span>BONUS: IG Creator Assets</span> <span class="font-semibold">$97 Value</span></li>
-                    <li class="flex justify-between items-center accent-color"><span>BONUS: Sell Funnels For A Living</span> <span class="font-semibold">$67 Value</span></li>
-                    <li class="flex justify-between items-center accent-color"><span>BONUS: Paid Ad Domination Masterclass</span> <span class="font-semibold">$197 Value</span></li>
-                     <li class="flex justify-between items-center accent-color"><span>BONUS: Arsenal of DFY Resellable Products</span> <span class="font-semibold">$297 Value</span></li>
-                </ul>
-                <hr class="border-gray-700 my-4">
-                <div class="flex justify-between items-center text-xl">
-                    <span class="font-bold text-white">Total Value:</span>
-                    <span class="font-bold text-white">$1,496</span>
-                </div>
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 animate-on-scroll">They Sell You Courses. <span class="gradient-text">You Sell the System.</span></h2>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 animate-on-scroll" style="animation-delay: 0.2s;">
+                Join the new wave of digital entrepreneurs flipping the model and owning the business.
+            </p>
+            <div class="bg-black border border-gray-800 rounded-lg p-8 max-w-3xl mx-auto text-left mb-8 animate-on-scroll" style="animation-delay: 0.2s;">
+                <table class="w-full text-lg">
+                    <thead>
+                        <tr class="border-b border-gray-700">
+                            <th class="py-2 text-left text-gray-400">What You Get</th>
+                            <th class="py-2 text-right text-gray-400">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-3">1,000+ Digital Products</td>
+                            <td class="py-3 text-right font-semibold">$50,000</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-3">30,000+ Promo Videos</td>
+                            <td class="py-3 text-right font-semibold">$15,000</td>
+                        </tr>
+                         <tr class="border-b border-gray-800">
+                            <td class="py-3">Instagram Creator OS System</td>
+                            <td class="py-3 text-right font-semibold">$997</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-3">AI Assets & Custom GPTs</td>
+                            <td class="py-3 text-right font-semibold">$497</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-3">Go Viral Reels System</td>
+                            <td class="py-3 text-right font-semibold">$297</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-3">Get Clients System & DFY Offers</td>
+                            <td class="py-3 text-right font-semibold">$794</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-3 text-accent-color">BONUS: FB Ads Mastery Module</td>
+                            <td class="py-3 text-right font-semibold text-accent-color">$997</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 text-xl font-bold">TOTAL VALUE</td>
+                            <td class="py-4 text-xl font-bold text-right">$68,582</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <p class="text-lg text-gray-300 animate-on-scroll" style="animation-delay: 0.4s;">Get Everything Today For Just One Payment Of</p>
             <p class="text-7xl md:text-8xl font-extrabold my-4 accent-color animate-on-scroll" style="animation-delay: 0.5s;">$97</p>
-            <a href="https://payhip.com/b/RCiLW" class="payhip-buy-button btn text-xl md:text-2xl animate-on-scroll cta-glow" data-theme="blue" data-product="RCiLW" style="animation-delay: 0.6s;">YES, I'M READY! GIVE ME INSTANT ACCESS</a>
-             <p class="text-sm text-gray-500 mt-3 animate-on-scroll" style="animation-delay: 0.7s;">Instant Digital Access • Secure Checkout • 30-Day Money-Back Guarantee</p>
+            <a href="https://payhip.com/b/RCiLW" class="payhip-buy-button btn text-xl md:text-2xl animate-on-scroll cta-glow" data-theme="blue" data-product="RCiLW" style="animation-delay: 0.6s;">Get Instant Access for $97</a>
+             <p class="text-sm text-gray-500 mt-6 animate-on-scroll" style="animation-delay: 0.7s;">Instant download. Full resell license included.</p>
         </div>
     </section>
 
     <footer class="text-center p-8">
-        <p class="text-gray-600">&copy; 2025 IG Profit Engine. All Rights Reserved.</p>
+        <p class="text-gray-600">&copy; 2025 The Luxanta. All Rights Reserved.</p>
     </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Scroll Animation Observer
             const observerOptions = {
                 root: null,
                 rootMargin: "0px",
@@ -497,6 +467,7 @@
                 observer.observe(el);
             });
 
+            // "Show More" Button Logic
             const showMoreBtn = document.getElementById('show-more-btn');
             const hiddenTestimonials = document.getElementById('hidden-testimonials');
 
@@ -514,119 +485,8 @@
                     showMoreBtn.style.display = 'none';
                 });
             }
-
-             // Gemini API Logic
-            const generateBtn = document.getElementById('generate-ideas-btn');
-            const nicheInput = document.getElementById('niche-input');
-            const ideasOutput = document.getElementById('ideas-output');
-            const loadingSpinner = document.getElementById('loading-spinner');
-
-            generateBtn.addEventListener('click', async () => {
-                const niche = nicheInput.value.trim();
-                if (!niche) {
-                    ideasOutput.innerHTML = `<p class="text-red-400">Please enter your niche first.</p>`;
-                    return;
-                }
-
-                ideasOutput.innerHTML = '';
-                loadingSpinner.style.display = 'flex';
-                generateBtn.disabled = true;
-                generateBtn.textContent = 'Generating...';
-
-                const systemPrompt = "You are an expert Instagram marketing strategist specializing in creating viral short-form video content (Reels). Your goal is to provide creative, engaging, and trend-aware ideas.";
-                const userQuery = `Based on the niche '${niche}', generate 3 distinct and creative Instagram Reel ideas. For each idea, provide a compelling hook, a brief description of the content, and a call to action.`;
-                const apiKey = "";
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
-
-                const payload = {
-                    contents: [{ parts: [{ text: userQuery }] }],
-                    systemInstruction: { parts: [{ text: systemPrompt }] },
-                    generationConfig: {
-                        responseMimeType: "application/json",
-                        responseSchema: {
-                            type: "ARRAY",
-                            items: {
-                                type: "OBJECT",
-                                properties: {
-                                    "hook": { "type": "STRING" },
-                                    "content": { "type": "STRING" },
-                                    "cta": { "type": "STRING" }
-                                }
-                            }
-                        }
-                    }
-                };
-                
-                let retries = 3;
-                let delay = 1000;
-
-                while(retries > 0) {
-                    try {
-                        const response = await fetch(apiUrl, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(payload)
-                        });
-
-                        if (!response.ok) {
-                           if(response.status === 429) { // Rate limit
-                                await new Promise(resolve => setTimeout(resolve, delay));
-                                delay *= 2;
-                                retries--;
-                                if(retries === 0) throw new Error(`API error after retries: ${response.statusText}`);
-                                continue;
-                           }
-                           throw new Error(`API error: ${response.statusText}`);
-                        }
-
-                        const result = await response.json();
-                        
-                        loadingSpinner.style.display = 'none';
-                        generateBtn.disabled = false;
-                        generateBtn.innerHTML = 'Generate Ideas ✨';
-
-                        if (result.candidates && result.candidates.length > 0 && result.candidates[0].content?.parts?.[0]?.text) {
-                            const json = result.candidates[0].content.parts[0].text;
-                            const ideas = JSON.parse(json);
-                            
-                            ideas.forEach((idea, index) => {
-                                const ideaCard = document.createElement('div');
-                                ideaCard.className = 'module-card text-left animate-on-scroll';
-                                ideaCard.style.animationDelay = `${index * 0.1}s`;
-                                ideaCard.innerHTML = `
-                                    <p class="font-bold text-sm accent-color">IDEA ${index + 1}</p>
-                                    <h4 class="font-bold text-white mt-2">Hook:</h4>
-                                    <p class="text-gray-300">${idea.hook}</p>
-                                    <h4 class="font-bold text-white mt-4">Content:</h4>
-                                    <p class="text-gray-300">${idea.content}</p>
-                                    <h4 class="font-bold text-white mt-4">Call to Action:</h4>
-                                    <p class="text-gray-300">${idea.cta}</p>
-                                `;
-                                ideasOutput.appendChild(ideaCard);
-                                 // Re-trigger animation for newly added card
-                                setTimeout(() => observer.observe(ideaCard), 10);
-                            });
-                            return; // Success, exit loop
-                        } else {
-                            throw new Error("No content generated or unexpected response format.");
-                        }
-
-                    } catch (error) {
-                        console.error("Error calling Gemini API:", error);
-                        retries = 0; // Stop retrying on other errors
-                    }
-                }
-
-                // If loop finishes due to error or retries exceeded
-                loadingSpinner.style.display = 'none';
-                generateBtn.disabled = false;
-                generateBtn.innerHTML = 'Generate Ideas ✨';
-                ideasOutput.innerHTML = `<p class="text-red-400">Sorry, something went wrong. Please try again later.</p>`;
-
-            });
         });
     </script>
 
 </body>
 </html>
-
